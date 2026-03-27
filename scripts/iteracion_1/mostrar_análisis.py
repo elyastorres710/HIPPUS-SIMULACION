@@ -178,6 +178,7 @@ def main():
     indices_random_0 = np.random.choice(indices_diagnostico_0, size=2, replace=False)
     indices_random_1 = np.random.choice(indices_diagnostico_1, size=2, replace=False)
     indices_random = np.concatenate([indices_random_0, indices_random_1])
+    # mostrar elementos 
     for idx_sujeto in indices_random:
         generar_timeseries_sujeto(df_raw, idx_sujeto, ruta_resultados, fs=60.0)
         

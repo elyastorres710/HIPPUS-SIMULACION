@@ -2,10 +2,10 @@ import os
 import sys
 import numpy as np
 import pandas as pd
-from lib.generadores.signals import generar_señal_pupilar
 
 # Configuracion de entorno
 sys.path.append(os.getcwd())
+from lib.generadores.signals import generar_señal_pupilar
 
 # Parametros globales de adquisicion
 FS = 60.0             # Sampling rate (Hz)
