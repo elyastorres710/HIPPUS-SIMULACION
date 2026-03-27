@@ -18,7 +18,6 @@ import seaborn as sns
 import numpy as np
 import os
 
-
 def generar_distribucion_medida(df, medida, diagnosticos, color_dict, ruta_resultados):
     """
     Genera y guarda la distribución de probabilidad (PDF) para una medida específica.
@@ -96,11 +95,60 @@ def generar_scatter_medida(df, medida, diagnosticos, color_dict, marcador_dict, 
     plt.close()
     print(f"  - Guardada: scatter_{medida.lower()}.png")
 
+def generar_timeseries_sujeto(df_raw, idx_sujeto, ruta_resultados, fs=60.0):
+    """
+    Genera y guarda el gráfico de serie temporal de un sujeto específico.
+    
+    Args:
+        df_raw: DataFrame con los datos raw (columnas t_0, t_1, ... t_n y Diagnostico)
+        idx_sujeto: Índice (fila) del sujeto a graficar
+        ruta_resultados: Ruta donde guardar la imagen
+        fs: Frecuencia de muestreo en Hz (default: 60.0)
+    """
+    # Extraer señal temporal y diagnóstico
+    row = df_raw.iloc[idx_sujeto]
+    diagnostico = row["Diagnostico"]
+    
+    # Obtener solo las columnas de tiempo (t_0, t_1, ...)
+    cols_tiempo = [col for col in df_raw.columns if col.startswith("t_")]
+    señal = row[cols_tiempo].values.astype(float)
+    
+    # Crear vector de tiempo en segundos
+    n_muestras = len(señal)
+    tiempo = np.arange(n_muestras) / fs
+    
+    # Crear figura
+    plt.figure(figsize=(12, 5))
+    
+    # Color según diagnóstico
+    color = 'red' if 'Migraña' in diagnostico else 'blue'
+    
+    plt.plot(tiempo, señal, color=color, linewidth=1.2, alpha=0.8)
+    
+    plt.xlabel("Tiempo (s)", fontsize=12)
+    plt.ylabel("Diámetro Pupilar (mm)", fontsize=12)
+    plt.title(f"Sujeto {idx_sujeto} - {diagnostico}", fontsize=14)
+    plt.grid(True, alpha=0.3)
+    plt.tight_layout()
+    
+    # Guardar figura
+    plt.savefig(ruta_resultados + f"timeseries_sujeto_{idx_sujeto}.png", dpi=300, bbox_inches='tight')
+    plt.close()
+    print(f"  - Guardada: timeseries_sujeto_{idx_sujeto}.png ({diagnostico})")
+
 def main():
+    #random seed
+    np.random.seed(42)
+    
+    ruta_raw = "data/raw/dataset_iteracion_1.csv"
     ruta_entrada = "data/processed/analisis_resultados.csv"
     ruta_resultados = "data/results/"
-    # Cargar datos
+    
+    # Cargar datos procesados
     df = pd.read_csv(ruta_entrada)
+    
+    # Cargar datos raw (para visualizar series temporales)
+    df_raw = pd.read_csv(ruta_raw)
     
     # Mostrar resultados (solo encabezado)
     print(df.head())
@@ -113,11 +161,27 @@ def main():
     # Configuración inicial
     os.makedirs(ruta_resultados, exist_ok=True)
     diagnosticos = df["Diagnostico"].unique()
+
+    # Colores diferentes para cada diagnóstico
     colores = sns.color_palette("husl", len(diagnosticos))
     color_dict = dict(zip(diagnosticos, colores))
-    marcadores = ['o', 's', '^', 'D', 'v', '<', '>', 'p', '*', 'h']
+    
+    # Marcadores diferentes para cada diagnóstico
+    marcadores = ['o', 's']
     marcador_dict = {diag: marcadores[i % len(marcadores)] for i, diag in enumerate(diagnosticos)}
     
+    # Generar visualizacion de 4 sujetos random en versión RAW
+    print("\nGenerando series temporales de 4 sujetos aleatorios...")
+    tipos_de_diagnostico = df["Diagnostico"].unique()
+    indices_diagnostico_0 = df[df["Diagnostico"] == tipos_de_diagnostico[0]].index.tolist()
+    indices_diagnostico_1 = df[df["Diagnostico"] == tipos_de_diagnostico[1]].index.tolist()
+    indices_random_0 = np.random.choice(indices_diagnostico_0, size=2, replace=False)
+    indices_random_1 = np.random.choice(indices_diagnostico_1, size=2, replace=False)
+    indices_random = np.concatenate([indices_random_0, indices_random_1])
+    for idx_sujeto in indices_random:
+        generar_timeseries_sujeto(df_raw, idx_sujeto, ruta_resultados, fs=60.0)
+        
+
     # Generar scatter plots individuales por medida
     print("\nGenerando scatter plots por medida...")
     for medida in medidas:
