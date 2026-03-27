@@ -1,10 +1,10 @@
 # Tareas pendientes
 
-1. [ ] Definir medidas básicas para la extracción (por ejemplo: RMS, amplitud, parametros estadísticos, cuantificar el jitter, etc.)
-2. [ ] Definir las funciones y que parámetros recibirán (funcion (recibe señal) -> retorna medida ... una medida por función)
-3. [ ] Implementar las funciones
-4. [ ] generar un script que sea capaz de generar y almacenar múltiples señales
-5. [ ] generar un script que sea capaz de cargar múltiples señales y extraer las medidas
+1. [x] Definir medidas básicas para la extracción (por ejemplo: RMS, amplitud, parametros estadísticos, cuantificar el jitter, etc.)
+2. [x] Definir las funciones y que parámetros recibirán (funcion (recibe señal) -> retorna medida ... una medida por función)
+3. [x] Implementar las funciones
+4. [x] generar un script que sea capaz de generar y almacenar múltiples señales
+5. [x] generar un script que sea capaz de cargar múltiples señales y extraer las medidas
 
 
 ## observaciones:
