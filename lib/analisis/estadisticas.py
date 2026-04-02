@@ -23,6 +23,7 @@ def calcular_pui(señal: np.ndarray) -> float:
     Calcula el Indice de Inquietud Pupilar (PUI) como la suma de cambios absolutos.
     """
     return float(np.sum(np.abs(np.diff(señal))))
+    #revisar segun bibliografia
 
 def calcular_dfi(señal: np.ndarray) -> float:
     """
@@ -36,6 +37,7 @@ def calcular_velocidad_promedio(señal: np.ndarray, fs: float) -> float:
     """
     velocidad = np.abs(np.diff(señal) * fs)
     return float(np.mean(velocidad))
+    #revisar segun bibliografia
 
 def calcular_frecuencia_dominante(señal: np.ndarray, fs: float) -> float:
     """
