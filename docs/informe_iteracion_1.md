@@ -1,10 +1,10 @@
 # Informe Iteración 1
 
 ## Resumen de Cambios
-* **Fisiología más realista:** Se ajustaron los rangos de amplitud y frecuencia para permitir el solapamiento o cruce natural entre grupos (Sanos vs. Migraña).
+* **Fisiología más realista:** Ajusté los rangos de amplitud y frecuencia para permitir el solapamiento o cruce natural entre grupos (Sanos vs. Migraña).
 * **Ruido de Sensor:** Agregué un ruido variable del 1% al 7% directamente en la señal cruda.
 * **Métricas Clínicas:** Se agregó el cálculo de Sensibilidad (Recall), F1-Score y AUC-ROC para una no limitar el analisis comparativo.
-* **Visualización:** Los scatter plots (2D y 3D) confirman que los datos son mas complejos y separables
+* **Visualización:** Añadí gráficos de dispersión (2D y 3D) para analizar la distribución de los grupos, demostrando que los datos presentan una complejidad mayor y un solapamiento más realista.
 
 # Resultados
 El modelo de **Random Forest** demostró ser el más eficaz para el diagnóstico, logrando una alta capacidad de detección incluso con señales ruidosas.
