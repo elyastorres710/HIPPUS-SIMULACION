@@ -7,5 +7,7 @@ La mejor combinación con ruido al 15%: [Desviacion, PUI] y [Media, PUI]
 La mejor combinación con ruido al %20: [Dfi, Velocidad_Media] marcando 1.0 en todo. Y  [Desviacion, PUI] continua siendo de las mejores. 
 
 Al final seleccioné desviacion y PUI, que representan directamente la inestabilidad pupilar.
-De momento el modelo alcanzó una precisión cercana al 100% los grupos de control y migraña con ruido al 15%. Supongo que se debe al entorno controlado de la simulación, donde los grupos estan definidos matematicamente. En una fase clinica real esa precisión debería disminuir considerablemnte. Pero de momento estos biomarcadores son los mas relevantes para distinguir los grupos.
+De momento el modelo alcanzó una precisión cercana al 100% los grupos de control y migraña con ruido al 15%. 
+Supongo que se debe al entorno controlado de la simulación, donde los grupos estan definidos matematicamente. En una fase clinica real esa precisión debería disminuir considerablemnte.
+Pero de momento estos biomarcadores son los mas relevantes para distinguir los grupos.
 
