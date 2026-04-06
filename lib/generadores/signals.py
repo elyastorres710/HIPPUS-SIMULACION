@@ -8,15 +8,15 @@ def generar_señal_pupilar(tiempo: np.ndarray, es_patologico: bool = False) -> n
     diametro_base = np.random.normal(4.0, 0.5)
     
     if es_patologico:
-        # Criterios para Migraña Vestibular
-        amplitud = np.random.uniform(0.6, 1.0)
-        frecuencia = np.random.uniform(0.18, 0.22)
-        ruido_std = 0.05
+        # Migraña Vestibular
+        amplitud = np.random.uniform(0.35, 0.75) 
+        frecuencia = np.random.uniform(0.15, 0.35)
+        ruido_std = 0.04
     else:
-        # Criterios para Sujeto Control
-        amplitud = np.random.uniform(0.1, 0.3)
-        frecuencia = np.random.uniform(0.2, 0.5)
-        ruido_std = 0.01
+        # Sujeto Control
+        amplitud = np.random.uniform(0.15, 0.45) 
+        frecuencia = np.random.uniform(0.25, 0.55)
+        ruido_std = 0.02
 
     # Crear la señal: Base + Onda + Ruido
     onda = amplitud * np.sin(2 * np.pi * frecuencia * tiempo)
