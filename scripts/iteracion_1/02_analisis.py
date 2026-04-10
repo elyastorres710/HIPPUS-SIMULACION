@@ -11,13 +11,14 @@ from lib.analisis.estadisticas import (
     calcular_desviacion_estandar,
     calcular_rms,
     calcular_pui,
+    calcular_pual_fft,  #PARAMETRO NUEVO.
     calcular_dfi,
     calcular_velocidad_promedio,
     calcular_frecuencia_dominante
 )
 
 def ejecutar_procesamiento_datos():
-    ruta_entrada = "data/raw/dataset_iteracion_1.csv"
+    ruta_entrada = "data/raw/dataset_raw.csv"
     ruta_salida = "data/processed/analisis_resultados.csv"
     fs = 60.0  # Frecuencia de muestreo en Hz
     
@@ -41,6 +42,7 @@ def ejecutar_procesamiento_datos():
             "Desviacion": calcular_desviacion_estandar(señal_actual),
             "RMS": calcular_rms(señal_actual),
             "PUI": calcular_pui(señal_actual),
+            "PUAL": calcular_pual_fft(señal_actual, fs),
             "Dfi": calcular_dfi(señal_actual),
             "Velocidad_Media": calcular_velocidad_promedio(señal_actual, fs),
             "Frecuencia_Dom": calcular_frecuencia_dominante(señal_actual, fs),

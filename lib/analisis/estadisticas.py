@@ -25,6 +25,29 @@ def calcular_pui(señal: np.ndarray) -> float:
     return float(np.sum(np.abs(np.diff(señal))))
     #revisar segun bibliografia
 
+def calcular_pual_fft(señal: np.ndarray, fs: float) -> float:
+    """
+    Calcula la inquietud pupilar (PUAL) sumando la potencia en la banda de Gufoni (0.1-0.5 Hz).
+    """
+   #  Quitar la media ( diámetro base de la pupila)
+    señal_centrada = señal - np.mean(señal)
+    
+    # FFT
+    fft_vals = np.abs(np.fft.rfft(señal_centrada))
+    freqs = np.fft.rfftfreq(len(señal), 1/fs)
+    
+    # Energía en la banda de Gufoni (0.1 - 0.5 Hz)
+    mask_gufoni = (freqs >= 0.1) & (freqs <= 0.5)
+    potencia_gufoni = np.sum(fft_vals[mask_gufoni])
+    
+    # Energía total (frecuencias bajas y medias hasta 2Hz)
+    mask_total = (freqs > 0) & (freqs <= 2.0)
+    potencia_total = np.sum(fft_vals[mask_total])
+    
+    # PUAL RELATIVO (Ratio)
+    pual_relativo = potencia_gufoni / potencia_total if potencia_total > 0 else 0
+    return round(pual_relativo, 4) 
+
 def calcular_dfi(señal: np.ndarray) -> float:
     """
     Calcula el Indice de Fluctuacion Diferencial (Dfi) midiendo la amplitud pico a pico.

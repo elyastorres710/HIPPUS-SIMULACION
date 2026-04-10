@@ -1,19 +1,23 @@
 import pandas as pd
 import numpy as np
 import itertools
+import os
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, roc_auc_score
-
+from sklearn.metrics import (
+    accuracy_score, 
+    precision_score, 
+    recall_score, 
+    f1_score, 
+    roc_auc_score
+)
 # Cargar los datos y limpiar nombres
 datos = pd.read_csv('data/processed/analisis_resultados.csv')
 datos.columns = datos.columns.str.strip()
-
-# Pasar el diagnostico a numeros para que las metricas funcionen
 datos['clase'] = datos['Diagnostico'].map({'Control': 0, 'Migraña Vestibular': 1})
 
 # Configurar variables y dividir el dataset
-variables = ['Media', 'Desviacion', 'RMS', 'PUI', 'Dfi', 'Velocidad_Media', 'Frecuencia_Dom']
+variables = ['Media', 'Desviacion', 'RMS', 'PUI', 'PUAL', 'Dfi', 'Velocidad_Media', 'Frecuencia_Dom']
 X = datos[variables]
 y = datos['clase']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
