@@ -1,53 +1,57 @@
 import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 import ast
 import os
 
-# Cargar ranking para elegir los ejes automaticamente
+# Configuración de rutas
 ruta_ranking = 'scripts/iteracion_1/metricas_completas.csv'
 ruta_datos = 'data/processed/analisis_resultados.csv'
 
 if not os.path.exists(ruta_ranking):
-    print("Error: Ejecuta primero el script de clasificacion para generar el ranking.")
+    print("Error: Ejecuta primero el script de clasificación para generar el ranking.")
     exit()
 
-# Leer el top 1 del ranking
+# Cargar ranking y seleccionar las TOP 3 variables
 df_ranking = pd.read_csv(ruta_ranking)
 top_vars = ast.literal_eval(df_ranking.iloc[0]['Variables'])
 
-# Definir que variables graficar segun el ranking
 v1 = top_vars[0]
-v2 = top_vars[1] if len(top_vars) > 1 else top_vars[0]
+v2 = top_vars[1]
+v3 = top_vars[2] if len(top_vars) > 2 else top_vars[0]
 
-# Cargar metricas de los pacientes
+# Cargar datos
 datos = pd.read_csv(ruta_datos)
 datos.columns = datos.columns.str.strip()
 
-# Configuracion del grafico
-plt.figure(figsize=(10, 6))
-sns.set_theme(style="whitegrid")
+# Crear el gráfico 3D
+fig = plt.figure(figsize=(12, 8))
+ax = fig.add_subplot(111, projection='3d')
 
-sns.scatterplot(
-    data=datos,
-    x=v1,
-    y=v2,
-    hue='Diagnostico',
-    palette='viridis',
-    alpha=0.8,
-    s=80
-)
+# Separar grupos para asignar colores
+mv = datos[datos['Diagnostico'] == 'Migraña Vestibular']
+ctrl = datos[datos['Diagnostico'] == 'Control']
 
-# Etiquetas basadas en el ranking real
-plt.title(f'Top 1 Ranking: {v1} vs {v2}')
-plt.xlabel(f'{v1} (Mejor parametro)')
-plt.ylabel(f'{v2} (Segundo mejor parametro)')
+# Graficar cada grupo
+ax.scatter(mv[v1], mv[v2], mv[v3], c='#440154', label='Migraña Vestibular', s=50, alpha=0.6, edgecolors='w')
+ax.scatter(ctrl[v1], ctrl[v2], ctrl[v3], c='#22a884', label='Control', s=50, alpha=0.6, edgecolors='w')
+
+# Configurar etiquetas y título
+ax.set_title(f'Espacio 3D de Biomarcadores\nTop 3: {v1}, {v2} y {v3}', pad=20)
+ax.set_xlabel(v1)
+ax.set_ylabel(v2)
+ax.set_zlabel(v3)
+
+ax.legend()
+
+# Ajustar ángulo de visión para mejor perspectiva
+ax.view_init(elev=20, azim=45)
 
 # Guardar resultado
 if not os.path.exists('docs'):
     os.makedirs('docs')
 
-plt.savefig('docs/grafico_top_ranking.png', dpi=300)
+plt.tight_layout()
+plt.savefig('docs/grafico_3D_ranking.png', dpi=300)
 plt.show()
 
-print(f"Grafico generado con: {v1} y {v2}")
+print(f"Gráfico 3D generado con: {v1}, {v2} y {v3}")

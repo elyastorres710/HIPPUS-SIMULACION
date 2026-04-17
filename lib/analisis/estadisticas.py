@@ -1,73 +1,98 @@
 import numpy as np
 
+# LIMPIEZA DE ARTEFACTOS 
+def limpiar_señal(señal: np.ndarray) -> np.ndarray:
+    """
+    Detecta ceros (parpadeos) y los rellena mediante interpolación lineal.
+    """
+    señal_limpia = señal.copy()
+    indices_ceros = señal_limpia == 0
+    
+    if np.any(indices_ceros):
+        puntos_validos = ~indices_ceros
+        x_validos = np.where(puntos_validos)[0]
+        y_validos = señal_limpia[puntos_validos]
+        x_ceros = np.where(indices_ceros)[0]
+        
+        # Relleno de huecos para evitar saltos en la FFT
+        señal_limpia[indices_ceros] = np.interp(x_ceros, x_validos, y_validos)
+    
+    return señal_limpia
+
+# MÉTRICAS EN EL DOMINIO DEL TIEMPO 
+
 def calcular_media_pupilar(señal: np.ndarray) -> float:
-    """
-    Calcula el promedio aritmetico del diametro pupilar.
-    """
-    return float(np.mean(señal))
+    # Cálculo sobre datos no nulos para evitar sesgo por parpadeo
+    datos_reales = señal[señal > 0]
+    return float(np.mean(datos_reales)) if len(datos_reales) > 0 else 0.0
 
 def calcular_desviacion_estandar(señal: np.ndarray) -> float:
-    """
-    Calcula la desviacion estandar para cuantificar la variabilidad del hippus.
-    """
-    return float(np.std(señal))
+    # Evaluación de la variabilidad biológica sin artefactos
+    señal_limpia = limpiar_señal(señal)
+    return float(np.std(señal_limpia))
 
 def calcular_rms(señal: np.ndarray) -> float:
-    """
-    Calcula el valor eficaz (Root Mean Square) de la señal pupilar.
-    """
-    return float(np.sqrt(np.mean(np.square(señal))))
+    # Valor eficaz de la señal pre-procesada
+    señal_limpia = limpiar_señal(señal)
+    return float(np.sqrt(np.mean(np.square(señal_limpia))))
 
 def calcular_pui(señal: np.ndarray) -> float:
-    """
-    Calcula el Indice de Inquietud Pupilar (PUI) como la suma de cambios absolutos.
-    """
-    return float(np.sum(np.abs(np.diff(señal))))
-    #revisar segun bibliografia
-
-def calcular_pual_fft(señal: np.ndarray, fs: float) -> float:
-    """
-    Calcula la inquietud pupilar (PUAL) sumando la potencia en la banda de Gufoni (0.1-0.5 Hz).
-    """
-   #  Quitar la media ( diámetro base de la pupila)
-    señal_centrada = señal - np.mean(señal)
-    
-    # FFT
-    fft_vals = np.abs(np.fft.rfft(señal_centrada))
-    freqs = np.fft.rfftfreq(len(señal), 1/fs)
-    
-    # Energía en la banda de Gufoni (0.1 - 0.5 Hz)
-    mask_gufoni = (freqs >= 0.1) & (freqs <= 0.5)
-    potencia_gufoni = np.sum(fft_vals[mask_gufoni])
-    
-    # Energía total (frecuencias bajas y medias hasta 2Hz)
-    mask_total = (freqs > 0) & (freqs <= 2.0)
-    potencia_total = np.sum(fft_vals[mask_total])
-    
-    # PUAL RELATIVO (Ratio)
-    pual_relativo = potencia_gufoni / potencia_total if potencia_total > 0 else 0
-    return round(pual_relativo, 4) 
+    # Índice de inquietud basado en diferencias absolutas
+    señal_limpia = limpiar_señal(señal)
+    return float(np.sum(np.abs(np.diff(señal_limpia))))
 
 def calcular_dfi(señal: np.ndarray) -> float:
-    """
-    Calcula el Indice de Fluctuacion Diferencial (Dfi) midiendo la amplitud pico a pico.
-    """
-    return float(np.ptp(señal))
+    # Amplitud pico a pico de la fluctuación real
+    señal_limpia = limpiar_señal(señal)
+    return float(np.ptp(señal_limpia))
 
 def calcular_velocidad_promedio(señal: np.ndarray, fs: float) -> float:
-    """
-    Calcula la velocidad media de cambio pupilar en mm/s.
-    """
-    velocidad = np.abs(np.diff(señal) * fs)
-    return float(np.mean(velocidad))
-    #revisar segun bibliografia
+    # Dinámica de cambio pupilar en mm/s
+    señal_limpia = limpiar_señal(señal)
+    cambios = np.abs(np.diff(señal_limpia) * fs)
+    return float(np.mean(cambios))
+
+# MÉTRICAS EN EL DOMINIO DE LA FRECUENCIA (FFT) 
+
+def calcular_pual(señal: np.ndarray, fs: float) -> float:
+    # Cálculo del PUAL absoluto (0.2 - 2.0 Hz) según Casani 2026
+    señal_limpia = limpiar_señal(señal)
+    señal_centrada = señal_limpia - np.mean(señal_limpia)
+    n = len(señal_limpia)
+    
+    fft_vals = np.abs(np.fft.rfft(señal_centrada)) / n
+    freqs = np.fft.rfftfreq(n, 1/fs)
+    
+    mask_casani = (freqs >= 0.2) & (freqs <= 2.0)
+    pual_absoluto = np.sum(fft_vals[mask_casani])
+    
+    return round(float(pual_absoluto), 4)
+
+def calcular_pual_ratio(señal: np.ndarray, fs: float) -> float:
+    # Ratio de energía patológica normalizada
+    señal_limpia = limpiar_señal(señal)
+    señal_centrada = señal_limpia - np.mean(señal_limpia)
+    n = len(señal_limpia)
+    
+    fft_vals = np.abs(np.fft.rfft(señal_centrada)) / n
+    freqs = np.fft.rfftfreq(n, 1/fs)
+    
+    mask_casani = (freqs >= 0.2) & (freqs <= 2.0)
+    mask_total = (freqs >= 0) & (freqs <= 2.0)
+    
+    p_patologica = np.sum(fft_vals[mask_casani])
+    p_total = np.sum(fft_vals[mask_total])
+    
+    ratio = p_patologica / p_total if p_total > 0 else 0
+    return round(float(ratio), 4)
 
 def calcular_frecuencia_dominante(señal: np.ndarray, fs: float) -> float:
-    """
-    Identifica la frecuencia con mayor potencia mediante FFT (Transformada Rapida de Fourier).
-    """
-    señal_centrada = señal - np.mean(señal)
+    # Identificación del pico espectral principal
+    señal_limpia = limpiar_señal(señal)
+    señal_centrada = señal_limpia - np.mean(señal_limpia)
+    
     fft_vals = np.abs(np.fft.rfft(señal_centrada))
-    frecuencias = np.fft.rfftfreq(len(señal), d=1/fs)
+    frecuencias = np.fft.rfftfreq(len(señal_limpia), d=1/fs)
     
     return float(frecuencias[np.argmax(fft_vals)])
+    

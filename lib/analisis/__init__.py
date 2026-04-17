@@ -1,5 +1,5 @@
 """
-Módulo de análisis estadístico de señales pupiales.
+Módulo de análisis estadístico de señales pupilares.
 """
 
 from .estadisticas import (
@@ -9,7 +9,9 @@ from .estadisticas import (
     calcular_pui,
     calcular_dfi,
     calcular_velocidad_promedio,
-    calcular_frecuencia_dominante
+    calcular_frecuencia_dominante,
+    calcular_pual,        
+    calcular_pual_ratio   
 )
 
 __all__ = [
@@ -19,5 +21,7 @@ __all__ = [
     'calcular_pui',
     'calcular_dfi',
     'calcular_velocidad_promedio',
-    'calcular_frecuencia_dominante'
+    'calcular_frecuencia_dominante',
+    'calcular_pual',
+    'calcular_pual_ratio'
 ]
