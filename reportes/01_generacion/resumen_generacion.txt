@@ -1,0 +1,5 @@
+RESUMEN DE DATOS GENERADOS (MEJORADOS)
+===================================
+Sujetos: 1000
+Frecuencia: 60.0 Hz
+Duracion: 30.0 segundos

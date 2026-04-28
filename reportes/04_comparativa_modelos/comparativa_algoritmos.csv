@@ -1,0 +1,4 @@
+Algoritmo,Acc,Prec,Sens,F1
+Random Forest,0.97,1.0,0.94,0.969
+SVM,0.96,1.0,0.92,0.958
+KMeans,0.93,1.0,0.86,0.925

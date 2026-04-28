@@ -1,0 +1,21 @@
+INFORME DE RESULTADOS: EVALUACION HIPPUS PUPILAR
+----------------------------------------------
+
+1. VALIDACION DE LA SIMULACION (VS PAPERS)
+Comparacion con Gufoni 2023:
+   - Sensibilidad: Obtenida 93.60% (Esperada 93.0%)
+   - Especificidad: Obtenida 94.20% (Esperada 94.0%)
+
+Comparacion con Gufoni 2026 (PUAL):
+   - Sensibilidad: Obtenida 90.40% (Esperada 91.0%)
+   - Especificidad: Obtenida 100.00% (Esperada 99.0%)
+
+2. RENDIMIENTO DE LA IA (PROPUESTA)
+Resultados sobre Muestra Ciega (n=200):
+   - Sensibilidad: 97.00%
+   - Especificidad: 99.00%
+
+3. ANALISIS DE MEJORA CLINICA
+   - Mejora neta vs Gufoni 2023: +3.40% Sens. / +4.80% Espec.
+   - Mejora neta vs Gufoni 2026: +6.60% Sens. / -1.00% Espec.
+
