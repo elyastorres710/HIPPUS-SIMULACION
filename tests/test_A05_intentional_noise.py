@@ -20,7 +20,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
-from lib.generadores.JohanssonBalkenius import ConfigurableJBS, DEFAULT_CONFIG
+from lib.generadores.JohanssonBalkenius import ConfigurableJBS, CUSTOM_CONFIG
 
 # ---------------------------------------------------------------------------
 # Configuración
@@ -54,13 +54,17 @@ def create_stabilized_system(L_background=0.0, T_stabilize=60.0):
     Returns:
         system: Sistema estabilizado con tiempo
     """
-    custom_config = copy.deepcopy(DEFAULT_CONFIG)
+    custom_config = copy.deepcopy(CUSTOM_CONFIG)
     custom_config['default_jitter_epsilon'] = 0.05 # Jitter biológico de retraso en procesamiento de los nucleos
     custom_config['default_tau_rec'] = 0.5 # Constante de recuperación del pool vesicular [s]:
     custom_config['default_U'] = 0.8 # Fracción del recurso consumida por unidad de actividad [-]:
     custom_config['default_sigma'] = 0.6 # Amplitud del ruido multiplicativo de canal [-]:
     custom_config['default_tau_jitter'] = 0.2  # Variabilidad temporal del retraso como fracción de τ [-]:
-    
+
+    # Simulación de sujetos distintos
+    custom_config['default_epsilon'] = custom_config['default_epsilon'] * (1 + np.random.normal(0,0.1))
+    custom_config['default_tau']     = custom_config['default_tau'] * (1 + np.random.normal(0,0.1))
+
     custom_config['boxes'].append({'name': 'disturbance', 'alpha': 0.0,  'beta': 0, 'gamma': 0})
     
     # # Añadir conexiones individualmente
@@ -68,18 +72,22 @@ def create_stabilized_system(L_background=0.0, T_stabilize=60.0):
     # custom_config['connections'].append({'from': 'disturbance', 'to': 'EWpg_r', 'tipo': 'shunting'})
     # custom_config['connections'].append({'from': 'disturbance', 'to': 'EWpg_l', 'tipo': 'excitatory'})
     # custom_config['connections'].append({'from': 'disturbance', 'to': 'EWpg_r', 'tipo': 'excitatory'})
-    custom_config['connections'].append({'from': 'disturbance', 'to': 'EWpg_l', 'tipo': 'inhibitory'})
-    custom_config['connections'].append({'from': 'disturbance', 'to': 'EWpg_r', 'tipo': 'inhibitory'})
+    # custom_config['connections'].append({'from': 'disturbance', 'to': 'EWpg_l', 'tipo': 'inhibitory'})
+    # custom_config['connections'].append({'from': 'disturbance', 'to': 'EWpg_r', 'tipo': 'inhibitory'})
+    custom_config['connections'].append({'from': 'disturbance', 'to': 'IML_l', 'tipo': 'inhibitory'})
+    custom_config['connections'].append({'from': 'disturbance', 'to': 'IML_r', 'tipo': 'inhibitory'})
 
     system = ConfigurableJBS(custom_config)
     system.config('enable_bilateral_noise', True)
     system.config('enable_stochastic_noise', True)
 
+    # deshabilita la historia para evitar sobrecarga de memoria
     system.enable_history = False
 
     n_steps = int(round(T_stabilize / system.dt))
 
-    system.define_input("disturbance", ['disturbance'])
+    # system.define_input("disturbance", ['disturbance']) # Aplicación de ruido como componente externo
+    system.define_input("disturbance", ['LC_l','LC_r']) # Modificación del nucleo en su componente alpha
 
     for i in range(n_steps):
         system.step_simulation(L=L_background)

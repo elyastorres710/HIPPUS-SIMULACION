@@ -655,6 +655,7 @@ class JohanssonBalkeniusBox:
 # Configuración por defecto del sistema (topología completa de J&B 2018)
 DEFAULT_EPSILON = 0.2
 DEFAULT_TAU = 0.02
+DEFAULT_BETA = 'auto'
 DEFAULT_GAMMA = 'auto'
 DEFAULT_DT = 0.002
 DEFAULT_CONFIG = {
@@ -733,7 +734,7 @@ DEFAULT_CONFIG = {
         # Cadena cortical
         {'from': 'cortex_excitatory', 'to': 'CB',     'tipo': 'excitatory', 'tau': DEFAULT_TAU},
         {'from': 'cortex_excitatory', 'to': 'AMY',    'tipo': 'excitatory', 'tau': DEFAULT_TAU},
-        {'from': 'cortex_novelty',    'to': 'AMY',    'tipo': 'us',         'tau': 10*DEFAULT_TAU},
+        {'from': 'cortex_novelty',    'to': 'AMY',    'tipo': 'us',         'tau': 2.1},
         {'from': 'cortex_emotional',  'to': 'LC_l',   'tipo': 'excitatory', 'tau': DEFAULT_TAU},
         {'from': 'cortex_emotional',  'to': 'LC_r',   'tipo': 'excitatory', 'tau': DEFAULT_TAU},
 
@@ -783,6 +784,135 @@ DEFAULT_CONFIG = {
         # Cadena simpática
         {'from': 'IML_l',   'to': 'SCG_l',   'tipo': 'excitatory', 'tau': DEFAULT_TAU},
         {'from': 'IML_r',   'to': 'SCG_r',   'tipo': 'excitatory', 'tau': DEFAULT_TAU},
+    ]
+}
+
+CUSTOM_CONFIG = {
+    'dt': DEFAULT_DT,
+    'default_epsilon': DEFAULT_EPSILON,
+    'default_tau':DEFAULT_TAU,
+    'default_beta':DEFAULT_BETA,
+    'default_gamma': DEFAULT_GAMMA,
+    'boxes': [
+        # ---- Entrada sensorial (controlada externamente vía alpha) ----
+        {'name': 'left_retinae_l',    'alpha': 0.0,  'beta': 0, 'gamma': 0},
+        {'name': 'left_retinae_r',    'alpha': 0.0,  'beta': 0, 'gamma': 0},
+        {'name': 'right_retinae_l',   'alpha': 0.0,  'beta': 0, 'gamma': 0},
+        {'name': 'right_retinae_r',   'alpha': 0.0,  'beta': 0, 'gamma': 0},
+        {'name': 'cortex_excitatory', 'alpha': 0.0,  'beta': 0, 'gamma': 0},
+        {'name': 'cortex_emotional',  'alpha': 0.0,  'beta': 0, 'gamma': 0},
+        {'name': 'cortex_novelty',    'alpha': 0.0,  'beta': 0, 'gamma': 0},
+
+        # ---- Vía parasimpática (Tabla A1: α=0, β=1/N, γ=1/M) ----
+        {'name': 'PTA_l',  'alpha': 0.0},
+        {'name': 'PTA_r',  'alpha': 0.0},
+        {'name': 'EWpg_l', 'alpha': 0.0},
+        {'name': 'EWpg_r', 'alpha': 0.0},
+        {'name': 'CG_l',   'alpha': 0.0},
+        {'name': 'CG_r',   'alpha': 0.0},
+
+        # ---- Predictor cerebellar lateralizado (nodo restador D3) ----
+        {'name': 'EWpg_pred_l', 'alpha': 0.0, 'beta': 1.0, 'gamma': 1.0},
+        {'name': 'EWpg_pred_r', 'alpha': 0.0, 'beta': 1.0, 'gamma': 1.0},
+
+        # ---- Vía simpática (Tabla A1) ----
+        {'name': 'IML_l',  'alpha': 0.0},
+        {'name': 'IML_r',  'alpha': 0.0},
+        {'name': 'SCG_l',  'alpha': 0.0},
+        {'name': 'SCG_r',  'alpha': 0.0},
+
+        # ---- Hipotálamo (Tabla A1: α=0 salvo PVN; β=1/N, γ=1/M) ----
+        {'name': 'VLPO',   'alpha': 0.0},
+        {'name': 'SCN',    'alpha': 0.0},
+        {'name': 'LH',     'alpha': 0.0},
+        {'name': 'DMH',    'alpha': 0.0},
+        {'name': 'PVN',    'alpha': 1.0},
+        # {'name': 'PVN',    'alpha': 1.0,  'beta': 'auto', 'gamma': 1.0, 'epsilon': 5*DEFAULT_DT},
+
+        # ---- PONS (Tabla A1: LC con α=0, β=0.05, γ=1/M) ----
+        {'name': 'LC_l',   'alpha': 0.0,  'beta': 0.05,   'gamma': 1.0},
+        {'name': 'LC_r',   'alpha': 0.0,  'beta': 0.05,   'gamma': 1.0},
+
+        # ---- AMÍGDALA (Tabla A1: α=0, β=1.0, γ=1/M; plástica con λ=0.05) ----
+        {'name': 'AMY',    'alpha': 0.0,  'beta': 1.0,    'gamma': 1.0,
+         'plastic': True,  'lambda_rate': 0.05},
+
+        # ---- CEREBELO (Tabla A1: α=0, β=1.0, γ=1/M; plástica con λ=0.1) ----
+        {'name': 'CB',     'alpha': 0.0,  'beta': 1.0,    'gamma': 1.0,
+         'plastic': True,  'lambda_rate': 0.1},
+
+    ],
+    'connections': [
+        # Cadena parasimpática
+        {'from': 'left_retinae_l',  'to': 'PTA_l',  'tipo': 'excitatory'},
+        {'from': 'left_retinae_r',  'to': 'PTA_r',  'tipo': 'excitatory'},
+        {'from': 'right_retinae_l', 'to': 'PTA_l',  'tipo': 'excitatory'},
+        {'from': 'right_retinae_r', 'to': 'PTA_r',  'tipo': 'excitatory'},
+
+        {'from': 'PTA_l',   'to': 'EWpg_l', 'tipo': 'excitatory'},
+        {'from': 'PTA_l',   'to': 'EWpg_r', 'tipo': 'excitatory'},
+        {'from': 'PTA_r',   'to': 'EWpg_l', 'tipo': 'excitatory'},
+        {'from': 'PTA_r',   'to': 'EWpg_r', 'tipo': 'excitatory'},
+
+        {'from': 'EWpg_l',  'to': 'CG_l',   'tipo': 'excitatory'},
+        {'from': 'EWpg_r',  'to': 'CG_r',   'tipo': 'excitatory'},
+
+        {'from': 'EWpg_l',  'to': 'CB',     'tipo': 'us'},
+        {'from': 'EWpg_r',  'to': 'CB',     'tipo': 'us'},
+
+        # Cadena cortical
+        {'from': 'cortex_excitatory', 'to': 'CB',     'tipo': 'excitatory'},
+        {'from': 'cortex_excitatory', 'to': 'AMY',    'tipo': 'excitatory'},
+        {'from': 'cortex_novelty',    'to': 'AMY',    'tipo': 'us', 'tau': 2.1},
+        {'from': 'cortex_emotional',  'to': 'LC_l',   'tipo': 'excitatory'},
+        {'from': 'cortex_emotional',  'to': 'LC_r',   'tipo': 'excitatory'},
+
+        # Loop CB - EWpg vía predictor lateralizado
+        {'from': 'CB',          'to': 'EWpg_pred_l', 'tipo': 'excitatory'},
+        {'from': 'CB',          'to': 'EWpg_pred_r', 'tipo': 'excitatory'},
+        {'from': 'EWpg_l',      'to': 'EWpg_pred_l', 'tipo': 'inhibitory'},
+        {'from': 'EWpg_r',      'to': 'EWpg_pred_r', 'tipo': 'inhibitory'},
+        {'from': 'EWpg_pred_l', 'to': 'EWpg_l',      'tipo': 'excitatory'},
+        {'from': 'EWpg_pred_r', 'to': 'EWpg_r',      'tipo': 'excitatory'},
+
+        # Cadena amigdalar
+        {'from': 'AMY',   'to': 'LC_l',    'tipo': 'excitatory'},
+        {'from': 'AMY',   'to': 'LC_r',    'tipo': 'excitatory'},
+
+        # Cadena PONS
+        {'from': 'LC_l',  'to': 'IML_l',   'tipo': 'excitatory'},
+        {'from': 'LC_r',  'to': 'IML_r',   'tipo': 'excitatory'},
+        {'from': 'LC_l',  'to': 'EWpg_l',  'tipo': 'shunting'},
+        {'from': 'LC_r',  'to': 'EWpg_r',  'tipo': 'shunting'},
+
+        # Cadena Hypothalamus
+        {'from': 'left_retinae_l',  'to': 'VLPO',  'tipo': 'excitatory'},
+        {'from': 'left_retinae_r',  'to': 'VLPO',  'tipo': 'excitatory'},
+        {'from': 'right_retinae_l', 'to': 'VLPO',  'tipo': 'excitatory'},
+        {'from': 'right_retinae_r', 'to': 'VLPO',  'tipo': 'excitatory'},
+
+        {'from': 'left_retinae_l',  'to': 'SCN',   'tipo': 'excitatory'},
+        {'from': 'left_retinae_r',  'to': 'SCN',   'tipo': 'excitatory'},
+        {'from': 'right_retinae_l', 'to': 'SCN',   'tipo': 'excitatory'},
+        {'from': 'right_retinae_r', 'to': 'SCN',   'tipo': 'excitatory'},
+
+        {'from': 'SCN',   'to': 'DMH',   'tipo': 'excitatory'},
+        {'from': 'SCN',   'to': 'PVN',   'tipo': 'inhibitory'},
+        {'from': 'DMH',   'to': 'LH',    'tipo': 'excitatory'},
+
+        {'from': 'VLPO',  'to': 'LC_l',  'tipo': 'inhibitory'},
+        {'from': 'VLPO',  'to': 'LC_r',  'tipo': 'inhibitory'},
+        {'from': 'DMH',   'to': 'LC_l',  'tipo': 'excitatory'},
+        {'from': 'DMH',   'to': 'LC_r',  'tipo': 'excitatory'},
+        {'from': 'LH',    'to': 'LC_l',  'tipo': 'excitatory'},
+        {'from': 'LH',    'to': 'LC_r',  'tipo': 'excitatory'},
+
+        {'from': 'PVN',   'to': 'IML_l', 'tipo': 'excitatory'},
+        {'from': 'PVN',   'to': 'IML_r', 'tipo': 'excitatory'},
+
+        # Cadena simpática
+        {'from': 'IML_l',   'to': 'SCG_l',   'tipo': 'excitatory'},
+        {'from': 'IML_r',   'to': 'SCG_r',   'tipo': 'excitatory'}
     ]
 }
 
@@ -858,7 +988,7 @@ class JohanssonBalkeniusSystem:
         self.default_beta              = system_config.get('default_beta',    "auto")
         self.default_gamma             = system_config.get('default_gamma',   "auto")
 
-        self.default_epsilon_nom: float = system_config.get('default_epsilon', 1.0)
+        self.default_epsilon_nom: float = system_config.get('default_epsilon',        1.0)
         self.default_epsilon_std: float = system_config.get('default_jitter_epsilon', 0.0)
 
 
