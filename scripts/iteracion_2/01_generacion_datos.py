@@ -18,9 +18,8 @@ SEED = 42
 
 np.random.seed(SEED)
 
-# ===========================================================================
+
 # ARQUITECTURA BASE DE LA RED (Se ejecuta una sola vez fuera del bucle masivo)
-# ===========================================================================
 config_base = copy.deepcopy(CUSTOM_CONFIG)
 
 # Configuración de parámetros internos fijos para la Iteración 2
@@ -35,7 +34,7 @@ config_base['boxes'].append({'name': 'disturbance', 'alpha': 0.0, 'beta': 0, 'ga
 config_base['connections'].append({'from': 'disturbance', 'to': 'EWpg_l', 'tipo': 'inhibitory'})
 config_base['connections'].append({'from': 'disturbance', 'to': 'EWpg_r', 'tipo': 'inhibitory'})
 
-# Guardamos el valor por defecto de epsilon y tau del framework para las variaciones
+# Guardar el valor por defecto de epsilon y tau del framework para las variaciones
 EPSILON_BASE = config_base['default_epsilon']
 TAU_BASE = config_base['default_tau']
 
@@ -45,7 +44,7 @@ def preparar_sistema_sujeto(ruido_magnitud, L_background=0.5, T_stabilize=15.0):
     Configura y estabiliza el modelo optimizando la inicialización 
     y reduciendo el tiempo de transitorio para acelerar la ejecución masiva.
     """
-    # Clonamos la estructura base ya armada para evitar sobrecarga de copias profundas pesadas
+    # Se clona la estructura base ya armada para evitar sobrecarga de copias profundas pesadas
     config_sujeto = config_base.copy()
 
     # Aplicar la variación aleatoria poblacional (sujetos únicos)
