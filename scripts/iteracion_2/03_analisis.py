@@ -19,8 +19,8 @@ from lib.analisis.estadisticas import (
 )
 
 def ejecutar_procesamiento_datos():
-    ruta_entrada = "data/raw/dataset_it2_johansson.csv"
-    ruta_salida = "data/processed/analisis_resultados_it2.csv"
+    ruta_entrada = "data/raw/dataset_final.csv"
+    ruta_salida = "data/processed/analisis_final.csv"
     frecuencia_muestreo = 60.0  # Hz
     
     if not os.path.exists(ruta_entrada):
@@ -60,4 +60,4 @@ def ejecutar_procesamiento_datos():
     print(f"Procesamiento de señales finalizado. Archivo guardado en: {ruta_salida}")
 
 if __name__ == "__main__":
-    ejecutar_procesamiento_datos()
+    ejecutar_procesamiento_datos() 

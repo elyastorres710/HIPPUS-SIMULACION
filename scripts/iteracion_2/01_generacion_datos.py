@@ -19,7 +19,7 @@ SEED = 42
 np.random.seed(SEED)
 
 
-# ARQUITECTURA BASE DE LA RED (Se ejecuta una sola vez fuera del bucle masivo)
+# ARQUITECTURA BASE DE LA RED 
 config_base = copy.deepcopy(CUSTOM_CONFIG)
 
 # Configuración de parámetros internos fijos para la Iteración 2
@@ -29,7 +29,7 @@ config_base['default_U'] = 0.8
 config_base['default_sigma'] = 0.6
 config_base['default_tau_jitter'] = 0.2
 
-# Estructurar la perturbación externa de forma sináptica
+# Estructura de perturbación externa de forma sináptica
 config_base['boxes'].append({'name': 'disturbance', 'alpha': 0.0, 'beta': 0, 'gamma': 0})
 config_base['connections'].append({'from': 'disturbance', 'to': 'EWpg_l', 'tipo': 'inhibitory'})
 config_base['connections'].append({'from': 'disturbance', 'to': 'EWpg_r', 'tipo': 'inhibitory'})
@@ -39,7 +39,7 @@ EPSILON_BASE = config_base['default_epsilon']
 TAU_BASE = config_base['default_tau']
 
 
-def preparar_sistema_sujeto(ruido_magnitud, L_background=0.5, T_stabilize=15.0):
+def preparar_sistema_sujeto(L_background=0.5, T_stabilize=15.0, es_patologico=False):
     """
     Configura y estabiliza el modelo optimizando la inicialización 
     y reduciendo el tiempo de transitorio para acelerar la ejecución masiva.
@@ -61,8 +61,8 @@ def preparar_sistema_sujeto(ruido_magnitud, L_background=0.5, T_stabilize=15.0):
     # Estabilización optimizada (15 segundos bastan para remover el transitorio numérico)
     pasos_estabilizacion = int(round(T_stabilize / system.dt))
     for _ in range(pasos_estabilizacion):
-        system.step_simulation(L=L_background, inputs={'disturbance': 0.0})
-
+        ruido_estab = np.random.normal(0, 0.15)
+        system.step_simulation(L=L_background, inputs={'disturbance': ruido_estab})
     system.t = 0
     return system
 
@@ -76,21 +76,21 @@ downsample_factor = int((1.0 / FREQ_MUESTREO) / DT)
 pasos_grabacion = int(T_TOTAL / DT)
 
 for i in range(N_SUJETOS):
-    # Definición de grupos clínicos
-    es_patologico = i >= 500
+    es_patologico = i >= (N_SUJETOS // 2)
+    
     if es_patologico:
-        ruido_magnitud = np.random.uniform(1.0)
+        ruido_magnitud = np.random.uniform(0.5, 1.2) # Magnitud alta para Migraña      #Rangos finales
         diagnostico = "Migraña Vestibular"
     else:
-        ruido_magnitud = np.random.uniform(0.2)
-        diagnostico = "Control"
+        ruido_magnitud = np.random.uniform(0.1, 0.6) # Magnitud baja para Control      #Rangos finales
+        diagnostico = "Control" 
 
-    # Inicialización veloz del sujeto
-    modelo = preparar_sistema_sujeto(ruido_magnitud, L_background=L_BASE, T_stabilize=15.0)
+    modelo = preparar_sistema_sujeto(L_background=L_BASE, T_stabilize=15.0, es_patologico=es_patologico)
     registros_pupila = []
 
     # Simulación principal de la prueba (30 segundos)
     for _ in range(pasos_grabacion):
+        # Aquí se inyecta la inestabilidad en la simulación paso a paso
         valor_ruido_actual = np.random.normal(0, ruido_magnitud)
         modelo.step_simulation(L=L_BASE, inputs={'disturbance': valor_ruido_actual})
         registros_pupila.append(modelo.get_output("pupil_left"))
@@ -111,6 +111,8 @@ df = pd.DataFrame(dataset, columns=columnas)
 
 output_dir = "data/raw"
 os.makedirs(output_dir, exist_ok=True)
-df.to_csv(os.path.join(output_dir, "dataset_it2_johansson.csv"), index=False)
+df.to_csv(os.path.join(output_dir, "dataset_final.csv"), index=False)
 
-print(f"\nProceso finalizado con éxito. Dataset guardado en: {os.path.join(output_dir, 'dataset_it2_johansson.csv')}")
+print(f"\nProceso finalizado con éxito. Dataset guardado en: {os.path.join(output_dir, 'dataset_final.csv')}")
+
+

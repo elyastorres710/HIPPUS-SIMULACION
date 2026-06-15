@@ -5,9 +5,9 @@ import matplotlib.pyplot as plt
 
 def main():
     # Rutas de entrada y salida basadas en la estructura del proyecto
-    input_file = "data/raw/dataset_it2_johansson.csv"
-    output_dir = "data/test"
-    output_plot = os.path.join(output_dir, "verificacion_it2_comparacion.png")
+    input_file = "data/raw/dataset_final.csv"
+    output_dir = "scripts/iteracion_2"
+    output_plot = os.path.join(output_dir, "verificacion_final.png")
 
     # Verificar que el archivo generado en el script 01 exista
     if not os.path.exists(input_file):
@@ -27,13 +27,13 @@ def main():
         print("Error: El archivo no contiene ambas clases ('Control' y 'Migraña Vestibular').")
         return
 
-    # Selección aleatoria de una fila para cada grupo
-    idx_control = np.random.choice(df_control.index)
+    # Selección específica de una fila para cada grupo
+    idx_control = 165
     idx_num_control = df_control.index.get_loc(idx_control)
-    
-    idx_mv = np.random.choice(df_mv.index)
-    idx_num_mv = df_mv.index.get_loc(idx_mv)
 
+    idx_mv = 987
+    idx_num_mv = df_mv.index.get_loc(idx_mv)    
+    
     # Extraer las series de tiempo numéricas omitiendo la columna del diagnóstico
     valores_control = df_control.loc[idx_control].iloc[:-1].astype(float).values
     valores_mv = df_mv.loc[idx_mv].iloc[:-1].astype(float).values
@@ -48,7 +48,7 @@ def main():
     # Construcción de la gráfica comparativa
     plt.figure(figsize=(12, 6))
     
-    plt.plot(tiempo, valores_mv, color='#e74c3c', linewidth=1.5, label=f'Migraña Vestibular (ID: {idx_mv})', alpha=1) 
+    plt.plot(tiempo, valores_mv, color='#e74c3c', linewidth=1.5,linestyle='--', label=f'Migraña Vestibular (ID: {idx_mv})', alpha=1) 
     plt.plot(tiempo, valores_control, color='#2ecc71', linewidth=1.5, label=f'Sano / Control (ID: {idx_control})', alpha=1)
     
     plt.xlabel('Tiempo (s)', fontsize=11)
@@ -56,6 +56,7 @@ def main():
     plt.title(f'Comparación Dinámica: Sujeto Sano (ID: {idx_control}) vs Migraña Vestibular (ID: {idx_mv}) — Iteración 2', fontsize=12, fontweight='bold')
     plt.legend(loc='upper right', fontsize=10)
     plt.grid(True, alpha=0.3)
+    plt.ylim(2.5, 6.5)
     
     plt.tight_layout()
     
