@@ -1,0 +1,382 @@
+Variables,N_Variables,Exactitud,Precision,Sensibilidad,F1_Score,AUC
+Media + PUAL + PUAL_Ratio + Dfi,4,0.915,0.922,0.913,0.918,0.961
+PUAL + PUAL_Ratio + Dfi,3,0.91,0.913,0.913,0.913,0.958
+Media + Desviacion + PUAL_Ratio + Dfi,4,0.905,0.905,0.913,0.909,0.96
+PUAL + PUAL_Ratio + Dfi + Frecuencia_Dom,4,0.91,0.922,0.904,0.913,0.955
+Desviacion + RMS + PUAL + PUAL_Ratio + Dfi,5,0.905,0.913,0.904,0.908,0.96
+Desviacion + RMS + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.905,0.913,0.904,0.908,0.959
+Media + Desviacion + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.905,0.913,0.904,0.908,0.957
+Desviacion + RMS + PUI + PUAL_Ratio + Dfi,5,0.9,0.904,0.904,0.904,0.965
+Media + Desviacion + Dfi,3,0.9,0.904,0.904,0.904,0.961
+Desviacion + RMS + PUAL + Dfi + Frecuencia_Dom,5,0.9,0.904,0.904,0.904,0.957
+Desviacion + RMS + PUI + PUAL + Frecuencia_Dom,5,0.9,0.904,0.904,0.904,0.956
+Desviacion + RMS + PUAL_Ratio + Dfi,4,0.895,0.895,0.904,0.9,0.961
+Media + Desviacion + PUI + Dfi + Frecuencia_Dom,5,0.89,0.887,0.904,0.895,0.96
+Media + PUI + PUAL + Velocidad_Media + Frecuencia_Dom,5,0.89,0.887,0.904,0.895,0.945
+Media + Desviacion + PUI + PUAL + Dfi,5,0.88,0.87,0.904,0.887,0.961
+RMS + PUI + PUAL + PUAL_Ratio,4,0.91,0.93,0.894,0.912,0.961
+Media + PUI + PUAL + PUAL_Ratio + Dfi,5,0.91,0.93,0.894,0.912,0.961
+RMS + PUI + PUAL + PUAL_Ratio + Dfi,5,0.91,0.93,0.894,0.912,0.96
+Media + RMS + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.91,0.93,0.894,0.912,0.954
+RMS + PUAL_Ratio + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.905,0.921,0.894,0.907,0.962
+RMS + PUAL + PUAL_Ratio + Dfi,4,0.905,0.921,0.894,0.907,0.961
+Media + PUI + PUAL + PUAL_Ratio,4,0.905,0.921,0.894,0.907,0.96
+RMS + PUAL + PUAL_Ratio + Velocidad_Media,4,0.905,0.921,0.894,0.907,0.96
+Media + PUI + PUAL + PUAL_Ratio + Velocidad_Media,5,0.905,0.921,0.894,0.907,0.959
+Desviacion + RMS + PUI + PUAL_Ratio + Frecuencia_Dom,5,0.905,0.921,0.894,0.907,0.959
+RMS + PUI + PUAL + PUAL_Ratio + Velocidad_Media,5,0.905,0.921,0.894,0.907,0.958
+RMS + PUAL_Ratio + Dfi + Frecuencia_Dom,4,0.905,0.921,0.894,0.907,0.956
+Desviacion + RMS + Dfi,3,0.9,0.912,0.894,0.903,0.962
+Desviacion + RMS + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.9,0.912,0.894,0.903,0.961
+Media + Desviacion + PUAL + PUAL_Ratio + Dfi,5,0.9,0.912,0.894,0.903,0.959
+Desviacion + RMS + PUAL_Ratio,3,0.9,0.912,0.894,0.903,0.957
+Media + RMS + PUI + PUAL + Dfi,5,0.9,0.912,0.894,0.903,0.956
+Media + Desviacion + RMS + PUAL_Ratio + Dfi,5,0.895,0.903,0.894,0.899,0.962
+Media + PUAL + PUAL_Ratio + Velocidad_Media,4,0.895,0.903,0.894,0.899,0.961
+Desviacion + RMS + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.895,0.903,0.894,0.899,0.961
+Desviacion + RMS + PUAL + Dfi,4,0.895,0.903,0.894,0.899,0.959
+Media + Desviacion + PUI + PUAL + Frecuencia_Dom,5,0.895,0.903,0.894,0.899,0.954
+Desviacion + RMS + PUAL + PUAL_Ratio + Frecuencia_Dom,5,0.895,0.903,0.894,0.899,0.954
+Media + PUAL + Velocidad_Media,3,0.895,0.903,0.894,0.899,0.949
+Media + Desviacion + RMS + Dfi,4,0.89,0.894,0.894,0.894,0.962
+PUI + PUAL + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.89,0.894,0.894,0.894,0.959
+Media + Desviacion + RMS + PUI + Frecuencia_Dom,5,0.89,0.894,0.894,0.894,0.957
+Media + Desviacion + RMS + Velocidad_Media + Frecuencia_Dom,5,0.89,0.894,0.894,0.894,0.957
+PUI + PUAL_Ratio + Dfi + Velocidad_Media,4,0.89,0.894,0.894,0.894,0.955
+Desviacion + PUAL_Ratio + Dfi + Frecuencia_Dom,4,0.89,0.894,0.894,0.894,0.951
+Media + Desviacion + Dfi + Frecuencia_Dom,4,0.885,0.886,0.894,0.89,0.957
+Media + Desviacion + PUAL + Dfi + Frecuencia_Dom,5,0.885,0.886,0.894,0.89,0.954
+Desviacion + PUAL + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.885,0.886,0.894,0.89,0.953
+RMS + PUI + Dfi + Velocidad_Media,4,0.885,0.886,0.894,0.89,0.951
+Desviacion + PUI + PUAL_Ratio,3,0.88,0.877,0.894,0.886,0.95
+PUI + PUAL,2,0.905,0.929,0.885,0.906,0.95
+PUAL + Velocidad_Media,2,0.905,0.929,0.885,0.906,0.95
+Media + RMS + PUI + PUAL + PUAL_Ratio,5,0.9,0.92,0.885,0.902,0.96
+Media + PUAL + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.9,0.92,0.885,0.902,0.955
+PUI + PUAL + Velocidad_Media + Frecuencia_Dom,4,0.9,0.92,0.885,0.902,0.954
+Media + Desviacion + PUI + PUAL_Ratio + Frecuencia_Dom,5,0.9,0.92,0.885,0.902,0.954
+RMS + PUAL + PUAL_Ratio,3,0.9,0.92,0.885,0.902,0.953
+Desviacion + RMS + PUAL_Ratio + Frecuencia_Dom,4,0.9,0.92,0.885,0.902,0.952
+Media + Desviacion + PUAL_Ratio + Dfi + Velocidad_Media,5,0.895,0.911,0.885,0.898,0.963
+Media + RMS + PUAL + PUAL_Ratio + Velocidad_Media,5,0.895,0.911,0.885,0.898,0.959
+Media + PUAL + PUAL_Ratio + Dfi + Velocidad_Media,5,0.895,0.911,0.885,0.898,0.959
+Media + Desviacion + PUI + PUAL + PUAL_Ratio,5,0.895,0.911,0.885,0.898,0.958
+RMS + PUAL + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.895,0.911,0.885,0.898,0.957
+Media + Desviacion + PUAL + PUAL_Ratio + Frecuencia_Dom,5,0.895,0.911,0.885,0.898,0.955
+PUAL + Dfi + Velocidad_Media + Frecuencia_Dom,4,0.895,0.911,0.885,0.898,0.954
+Media + Desviacion + PUI + PUAL + Velocidad_Media,5,0.895,0.911,0.885,0.898,0.953
+Media + PUAL_Ratio + Dfi + Frecuencia_Dom,4,0.895,0.911,0.885,0.898,0.952
+RMS + PUAL + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.895,0.911,0.885,0.898,0.95
+RMS + PUI + PUAL,3,0.895,0.911,0.885,0.898,0.949
+RMS + PUAL + Velocidad_Media,3,0.895,0.911,0.885,0.898,0.949
+Media + RMS + PUI + PUAL + Velocidad_Media,5,0.895,0.911,0.885,0.898,0.948
+Media + PUI + PUAL,3,0.895,0.911,0.885,0.898,0.945
+Media + RMS + PUI + PUAL,4,0.895,0.911,0.885,0.898,0.945
+PUAL_Ratio + Dfi + Frecuencia_Dom,3,0.895,0.911,0.885,0.898,0.941
+PUAL + PUAL_Ratio + Dfi + Velocidad_Media,4,0.89,0.902,0.885,0.893,0.964
+Desviacion + RMS + PUI + PUAL + PUAL_Ratio,5,0.89,0.902,0.885,0.893,0.961
+PUI + PUAL + PUAL_Ratio,3,0.89,0.902,0.885,0.893,0.96
+Media + Desviacion + PUAL + Dfi,4,0.89,0.902,0.885,0.893,0.96
+Media + Desviacion + RMS + Dfi + Velocidad_Media,5,0.89,0.902,0.885,0.893,0.96
+Media + Desviacion + PUI + PUAL_Ratio + Dfi,5,0.89,0.902,0.885,0.893,0.96
+PUAL + PUAL_Ratio + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.89,0.902,0.885,0.893,0.958
+Desviacion + RMS + Dfi + Frecuencia_Dom,4,0.89,0.902,0.885,0.893,0.956
+Media + RMS + PUAL + Dfi + Velocidad_Media,5,0.89,0.902,0.885,0.893,0.955
+Media + PUI + PUAL + Dfi + Velocidad_Media,5,0.89,0.902,0.885,0.893,0.955
+Desviacion + PUI + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.89,0.902,0.885,0.893,0.955
+Media + PUI + PUAL + PUAL_Ratio + Frecuencia_Dom,5,0.89,0.902,0.885,0.893,0.954
+Media + Desviacion + PUAL + PUAL_Ratio,4,0.89,0.902,0.885,0.893,0.953
+Desviacion + PUI + PUAL + Velocidad_Media + Frecuencia_Dom,5,0.89,0.902,0.885,0.893,0.952
+Desviacion + Dfi,2,0.89,0.902,0.885,0.893,0.95
+Desviacion + RMS + PUI + Dfi + Frecuencia_Dom,5,0.885,0.893,0.885,0.889,0.96
+Media + Desviacion + PUI + PUAL_Ratio + Velocidad_Media,5,0.885,0.893,0.885,0.889,0.957
+Media + RMS + PUI + Dfi + Frecuencia_Dom,5,0.885,0.893,0.885,0.889,0.956
+Desviacion + PUI + PUAL + PUAL_Ratio + Frecuencia_Dom,5,0.885,0.893,0.885,0.889,0.954
+Media + Desviacion + PUI + Velocidad_Media + Frecuencia_Dom,5,0.885,0.893,0.885,0.889,0.953
+Media + PUI + Dfi + Velocidad_Media,4,0.885,0.893,0.885,0.889,0.952
+Media + RMS + PUAL + Dfi + Frecuencia_Dom,5,0.885,0.893,0.885,0.889,0.952
+RMS + PUI + PUAL + PUAL_Ratio + Frecuencia_Dom,5,0.885,0.893,0.885,0.889,0.952
+RMS + PUI + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.885,0.893,0.885,0.889,0.952
+Media + Dfi + Frecuencia_Dom,3,0.885,0.893,0.885,0.889,0.951
+Media + PUAL + Dfi + Frecuencia_Dom,4,0.885,0.893,0.885,0.889,0.949
+Desviacion + PUAL + Frecuencia_Dom,3,0.885,0.893,0.885,0.889,0.948
+Media + Desviacion + RMS + Dfi + Frecuencia_Dom,5,0.88,0.885,0.885,0.885,0.96
+Media + PUAL + Dfi,3,0.88,0.885,0.885,0.885,0.952
+PUI + PUAL_Ratio + Dfi + Frecuencia_Dom,4,0.88,0.885,0.885,0.885,0.952
+Media + Desviacion + PUAL + Velocidad_Media + Frecuencia_Dom,5,0.88,0.885,0.885,0.885,0.95
+RMS + PUI + PUAL + Velocidad_Media + Frecuencia_Dom,5,0.88,0.885,0.885,0.885,0.945
+PUAL + PUAL_Ratio + Frecuencia_Dom,3,0.88,0.885,0.885,0.885,0.944
+PUAL + Dfi + Frecuencia_Dom,3,0.875,0.876,0.885,0.88,0.945
+Desviacion + PUI + Frecuencia_Dom,3,0.87,0.868,0.885,0.876,0.954
+Desviacion + Velocidad_Media + Frecuencia_Dom,3,0.87,0.868,0.885,0.876,0.954
+PUI + Dfi + Frecuencia_Dom,3,0.87,0.868,0.885,0.876,0.943
+RMS + PUI + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.87,0.868,0.885,0.876,0.925
+Desviacion + PUAL_Ratio,2,0.855,0.844,0.885,0.864,0.944
+Media + Desviacion + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.9,0.929,0.875,0.901,0.961
+Media + Desviacion + RMS + PUI + PUAL,5,0.9,0.929,0.875,0.901,0.958
+Media + PUAL_Ratio + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.895,0.919,0.875,0.897,0.961
+RMS + PUAL + PUAL_Ratio + Dfi + Velocidad_Media,5,0.895,0.919,0.875,0.897,0.961
+Media + RMS + PUAL + PUAL_Ratio + Dfi,5,0.895,0.919,0.875,0.897,0.959
+Media + PUAL + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.895,0.919,0.875,0.897,0.958
+Media + Desviacion + PUAL_Ratio + Frecuencia_Dom,4,0.895,0.919,0.875,0.897,0.952
+Media + Desviacion + RMS + PUAL + Dfi,5,0.89,0.91,0.875,0.892,0.961
+Media + Desviacion + PUAL + Dfi + Velocidad_Media,5,0.89,0.91,0.875,0.892,0.961
+Desviacion + RMS + PUI + PUAL_Ratio + Velocidad_Media,5,0.89,0.91,0.875,0.892,0.96
+PUI + PUAL + PUAL_Ratio + Dfi + Velocidad_Media,5,0.89,0.91,0.875,0.892,0.96
+PUAL + PUAL_Ratio + Velocidad_Media,3,0.89,0.91,0.875,0.892,0.959
+Desviacion + RMS + PUAL + PUAL_Ratio + Velocidad_Media,5,0.89,0.91,0.875,0.892,0.958
+Media + Desviacion + PUAL_Ratio,3,0.89,0.91,0.875,0.892,0.957
+RMS + PUI + PUAL_Ratio + Dfi + Velocidad_Media,5,0.89,0.91,0.875,0.892,0.957
+Desviacion + PUAL + Dfi,3,0.89,0.91,0.875,0.892,0.956
+Desviacion + RMS + PUAL + PUAL_Ratio,4,0.89,0.91,0.875,0.892,0.956
+RMS + PUAL + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.89,0.91,0.875,0.892,0.956
+PUI + PUAL + Dfi + Frecuencia_Dom,4,0.89,0.91,0.875,0.892,0.955
+Media + PUI + PUAL + Dfi + Frecuencia_Dom,5,0.89,0.91,0.875,0.892,0.954
+RMS + PUI + PUAL + Dfi + Frecuencia_Dom,5,0.89,0.91,0.875,0.892,0.953
+Media + PUAL + PUAL_Ratio,3,0.89,0.91,0.875,0.892,0.952
+PUAL_Ratio + Dfi + Velocidad_Media,3,0.89,0.91,0.875,0.892,0.952
+Desviacion + PUI + PUAL_Ratio + Frecuencia_Dom,4,0.89,0.91,0.875,0.892,0.952
+Media + PUAL + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.89,0.91,0.875,0.892,0.951
+PUI + Dfi + Velocidad_Media,3,0.89,0.91,0.875,0.892,0.95
+Desviacion + RMS + PUAL_Ratio + Dfi + Velocidad_Media,5,0.885,0.901,0.875,0.888,0.959
+Media + Desviacion + RMS + PUAL + PUAL_Ratio,5,0.885,0.901,0.875,0.888,0.958
+Desviacion + PUAL + PUAL_Ratio + Dfi,4,0.885,0.901,0.875,0.888,0.957
+Media + RMS + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.885,0.901,0.875,0.888,0.956
+Media + Desviacion + RMS + PUAL_Ratio + Frecuencia_Dom,5,0.885,0.901,0.875,0.888,0.954
+RMS + PUI + PUAL + Dfi + Velocidad_Media,5,0.885,0.901,0.875,0.888,0.953
+Media + Desviacion + PUI,3,0.885,0.901,0.875,0.888,0.952
+Media + Desviacion + Velocidad_Media,3,0.885,0.901,0.875,0.888,0.952
+Media + PUI + Dfi,3,0.885,0.901,0.875,0.888,0.952
+Media + Desviacion + Frecuencia_Dom,3,0.885,0.901,0.875,0.888,0.949
+RMS + PUI + Dfi,3,0.885,0.901,0.875,0.888,0.949
+RMS + PUI + PUAL + Velocidad_Media,4,0.885,0.901,0.875,0.888,0.949
+Desviacion + PUAL + PUAL_Ratio + Frecuencia_Dom,4,0.885,0.901,0.875,0.888,0.948
+Desviacion + RMS + Frecuencia_Dom,3,0.885,0.901,0.875,0.888,0.947
+Media + RMS + PUAL + Velocidad_Media,4,0.885,0.901,0.875,0.888,0.946
+Media + Desviacion + PUAL,3,0.88,0.892,0.875,0.883,0.957
+Desviacion + RMS + PUAL + Velocidad_Media + Frecuencia_Dom,5,0.88,0.892,0.875,0.883,0.956
+Media + PUI + PUAL_Ratio + Dfi + Frecuencia_Dom,5,0.88,0.892,0.875,0.883,0.954
+Media + RMS + PUI + Dfi + Velocidad_Media,5,0.88,0.892,0.875,0.883,0.952
+Desviacion + RMS + PUI + Velocidad_Media + Frecuencia_Dom,5,0.88,0.892,0.875,0.883,0.952
+Desviacion + PUAL + Dfi + Frecuencia_Dom,4,0.88,0.892,0.875,0.883,0.951
+RMS + PUAL + Dfi + Frecuencia_Dom,4,0.88,0.892,0.875,0.883,0.949
+RMS + PUI + PUAL + Frecuencia_Dom,4,0.88,0.892,0.875,0.883,0.947
+PUAL + Velocidad_Media + Frecuencia_Dom,3,0.88,0.892,0.875,0.883,0.944
+Desviacion + RMS + PUI + Dfi,4,0.875,0.883,0.875,0.879,0.959
+Media + Desviacion + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.875,0.883,0.875,0.879,0.958
+Desviacion + PUAL_Ratio + Dfi,3,0.875,0.883,0.875,0.879,0.956
+Desviacion + PUI + PUAL + Dfi + Frecuencia_Dom,5,0.875,0.883,0.875,0.879,0.953
+RMS + Dfi + Frecuencia_Dom,3,0.875,0.883,0.875,0.879,0.949
+Media + PUI + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.875,0.883,0.875,0.879,0.949
+Desviacion + PUAL + PUAL_Ratio,3,0.875,0.883,0.875,0.879,0.945
+Media + PUI + PUAL + Frecuencia_Dom,4,0.875,0.883,0.875,0.879,0.945
+Desviacion + PUI + PUAL,3,0.87,0.875,0.875,0.875,0.954
+Media + PUI + Dfi + Frecuencia_Dom,4,0.87,0.875,0.875,0.875,0.947
+RMS + PUAL + Velocidad_Media + Frecuencia_Dom,4,0.87,0.875,0.875,0.875,0.947
+Dfi + Velocidad_Media + Frecuencia_Dom,3,0.87,0.875,0.875,0.875,0.944
+Media + RMS + PUAL + Velocidad_Media + Frecuencia_Dom,5,0.87,0.875,0.875,0.875,0.942
+Desviacion + PUAL_Ratio + Velocidad_Media,3,0.865,0.867,0.875,0.871,0.95
+Desviacion + Dfi + Frecuencia_Dom,3,0.865,0.867,0.875,0.871,0.949
+Media + PUAL,2,0.86,0.858,0.875,0.867,0.939
+Media + PUI + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.86,0.858,0.875,0.867,0.925
+RMS + PUAL_Ratio + Velocidad_Media,3,0.855,0.85,0.875,0.863,0.937
+Media + RMS + PUAL_Ratio + Velocidad_Media,4,0.845,0.835,0.875,0.854,0.94
+Media + RMS + PUAL_Ratio + Dfi,4,0.9,0.938,0.865,0.9,0.956
+Media + PUAL_Ratio + Dfi + Velocidad_Media,4,0.895,0.928,0.865,0.896,0.957
+PUAL + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,4,0.895,0.928,0.865,0.896,0.952
+Desviacion + PUAL_Ratio + Frecuencia_Dom,3,0.895,0.928,0.865,0.896,0.947
+Media + RMS + PUAL_Ratio + Dfi + Velocidad_Media,5,0.89,0.918,0.865,0.891,0.959
+Media + Desviacion + PUAL + PUAL_Ratio + Velocidad_Media,5,0.89,0.918,0.865,0.891,0.957
+Media + PUAL_Ratio + Dfi,3,0.89,0.918,0.865,0.891,0.954
+RMS + PUAL_Ratio + Dfi,3,0.89,0.918,0.865,0.891,0.954
+PUI + PUAL + Dfi + Velocidad_Media,4,0.89,0.918,0.865,0.891,0.952
+Desviacion + RMS + PUAL_Ratio + Velocidad_Media,4,0.885,0.909,0.865,0.887,0.961
+Media + Desviacion + PUI + PUAL_Ratio,4,0.885,0.909,0.865,0.887,0.96
+Media + Desviacion + RMS + PUI + Dfi,5,0.885,0.909,0.865,0.887,0.959
+PUI + PUAL + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.885,0.909,0.865,0.887,0.959
+Media + PUI + PUAL_Ratio + Dfi + Velocidad_Media,5,0.885,0.909,0.865,0.887,0.958
+Media + Desviacion + PUAL_Ratio + Velocidad_Media,4,0.885,0.909,0.865,0.887,0.957
+PUI + PUAL + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.885,0.909,0.865,0.887,0.956
+PUI + PUAL + PUAL_Ratio + Velocidad_Media,4,0.885,0.909,0.865,0.887,0.955
+Media + RMS + PUAL + PUAL_Ratio,4,0.885,0.909,0.865,0.887,0.954
+Media + Desviacion + RMS + Frecuencia_Dom,4,0.885,0.909,0.865,0.887,0.953
+PUI + PUAL_Ratio + Dfi,3,0.885,0.909,0.865,0.887,0.952
+Desviacion + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,4,0.885,0.909,0.865,0.887,0.952
+PUI + PUAL + Velocidad_Media,3,0.885,0.909,0.865,0.887,0.947
+Desviacion + RMS + PUAL,3,0.88,0.9,0.865,0.882,0.961
+Media + Desviacion + RMS + PUI + PUAL_Ratio,5,0.88,0.9,0.865,0.882,0.961
+Media + Desviacion + PUI + Dfi + Velocidad_Media,5,0.88,0.9,0.865,0.882,0.96
+Desviacion + PUAL + PUAL_Ratio + Dfi + Velocidad_Media,5,0.88,0.9,0.865,0.882,0.959
+Desviacion + PUI + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.88,0.9,0.865,0.882,0.958
+Media + Desviacion + RMS + PUAL + Velocidad_Media,5,0.88,0.9,0.865,0.882,0.957
+Desviacion + RMS + PUI,3,0.88,0.9,0.865,0.882,0.956
+Desviacion + RMS + Velocidad_Media,3,0.88,0.9,0.865,0.882,0.956
+Desviacion + PUI + Dfi,3,0.88,0.9,0.865,0.882,0.955
+Media + Desviacion + PUI + PUAL,4,0.88,0.9,0.865,0.882,0.952
+Desviacion + RMS + PUAL + Frecuencia_Dom,4,0.88,0.9,0.865,0.882,0.951
+Dfi + Velocidad_Media,2,0.88,0.9,0.865,0.882,0.948
+Media + PUI + PUAL + Velocidad_Media,4,0.88,0.9,0.865,0.882,0.947
+PUI + Dfi + Velocidad_Media + Frecuencia_Dom,4,0.88,0.9,0.865,0.882,0.947
+Desviacion + PUI + PUAL_Ratio + Dfi,4,0.875,0.891,0.865,0.878,0.956
+Desviacion + PUI + PUAL + PUAL_Ratio + Dfi,5,0.875,0.891,0.865,0.878,0.956
+Desviacion + PUAL + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.875,0.891,0.865,0.878,0.955
+Desviacion + Dfi + Velocidad_Media,3,0.875,0.891,0.865,0.878,0.954
+PUAL + PUAL_Ratio,2,0.875,0.891,0.865,0.878,0.952
+Media + Dfi + Velocidad_Media,3,0.875,0.891,0.865,0.878,0.952
+RMS + PUAL + Dfi,3,0.875,0.891,0.865,0.878,0.952
+Media + RMS + PUAL + Dfi,4,0.875,0.891,0.865,0.878,0.952
+Desviacion + RMS + PUI + Frecuencia_Dom,4,0.875,0.891,0.865,0.878,0.952
+Desviacion + RMS + Velocidad_Media + Frecuencia_Dom,4,0.875,0.891,0.865,0.878,0.952
+RMS + Dfi + Velocidad_Media,3,0.875,0.891,0.865,0.878,0.951
+PUI + PUAL_Ratio + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.875,0.891,0.865,0.878,0.951
+PUI + PUAL + Frecuencia_Dom,3,0.875,0.891,0.865,0.878,0.949
+PUI + Dfi,2,0.875,0.891,0.865,0.878,0.945
+PUI + PUAL + PUAL_Ratio + Dfi,4,0.87,0.882,0.865,0.874,0.956
+Desviacion + PUAL_Ratio + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.87,0.882,0.865,0.874,0.956
+Desviacion + Dfi + Velocidad_Media + Frecuencia_Dom,4,0.87,0.882,0.865,0.874,0.955
+Desviacion + PUI + PUAL_Ratio + Dfi + Velocidad_Media,5,0.87,0.882,0.865,0.874,0.955
+Desviacion + PUI + PUAL + Frecuencia_Dom,4,0.87,0.882,0.865,0.874,0.951
+Desviacion + PUI + PUAL + PUAL_Ratio + Velocidad_Media,5,0.87,0.882,0.865,0.874,0.951
+Media + RMS + Dfi + Frecuencia_Dom,4,0.87,0.882,0.865,0.874,0.95
+Desviacion + PUAL + Velocidad_Media + Frecuencia_Dom,4,0.87,0.882,0.865,0.874,0.949
+Desviacion + Frecuencia_Dom,2,0.87,0.882,0.865,0.874,0.945
+Desviacion + PUI + Dfi + Frecuencia_Dom,4,0.865,0.874,0.865,0.87,0.953
+Media + Dfi + Velocidad_Media + Frecuencia_Dom,4,0.865,0.874,0.865,0.87,0.949
+RMS + PUI + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.865,0.874,0.865,0.87,0.948
+PUI + PUAL_Ratio,2,0.865,0.874,0.865,0.87,0.934
+Media + RMS + PUAL + Frecuencia_Dom,4,0.865,0.874,0.865,0.87,0.925
+RMS + Dfi + Velocidad_Media + Frecuencia_Dom,4,0.86,0.865,0.865,0.865,0.947
+Media + PUAL + Velocidad_Media + Frecuencia_Dom,4,0.86,0.865,0.865,0.865,0.945
+Desviacion + PUI + Velocidad_Media,3,0.86,0.865,0.865,0.865,0.943
+RMS + PUAL,2,0.86,0.865,0.865,0.865,0.935
+Media + RMS + PUAL,3,0.86,0.865,0.865,0.865,0.928
+Desviacion + PUI + PUAL + Dfi + Velocidad_Media,5,0.855,0.857,0.865,0.861,0.952
+PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,3,0.855,0.857,0.865,0.861,0.925
+RMS + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,4,0.855,0.857,0.865,0.861,0.924
+RMS + PUI + PUAL_Ratio + Frecuencia_Dom,4,0.85,0.849,0.865,0.857,0.934
+Media + RMS + PUI + Velocidad_Media + Frecuencia_Dom,5,0.85,0.849,0.865,0.857,0.908
+Media + PUAL + Frecuencia_Dom,3,0.845,0.841,0.865,0.853,0.927
+Media + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,4,0.845,0.841,0.865,0.853,0.927
+PUI + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,4,0.845,0.841,0.865,0.853,0.92
+Media + RMS + PUI + PUAL_Ratio + Dfi,5,0.895,0.937,0.856,0.894,0.957
+PUI + PUAL + Dfi,3,0.89,0.927,0.856,0.89,0.954
+RMS + PUAL_Ratio + Dfi + Velocidad_Media,4,0.885,0.918,0.856,0.886,0.958
+Media + PUI + PUAL_Ratio + Dfi,4,0.885,0.918,0.856,0.886,0.957
+RMS + PUI + PUAL_Ratio + Dfi,4,0.885,0.918,0.856,0.886,0.957
+RMS + PUAL + Dfi + Velocidad_Media,4,0.885,0.918,0.856,0.886,0.952
+Desviacion + RMS + PUI + PUAL + Velocidad_Media,5,0.885,0.918,0.856,0.886,0.952
+Media + PUAL + Dfi + Velocidad_Media,4,0.885,0.918,0.856,0.886,0.95
+Media + Desviacion + RMS + PUAL_Ratio + Velocidad_Media,5,0.88,0.908,0.856,0.881,0.963
+Desviacion + RMS + PUI + PUAL_Ratio,4,0.88,0.908,0.856,0.881,0.961
+Media + RMS + PUI + Dfi,4,0.88,0.908,0.856,0.881,0.953
+PUI + PUAL + PUAL_Ratio + Frecuencia_Dom,4,0.88,0.908,0.856,0.881,0.953
+Media + Desviacion + RMS + PUAL,4,0.875,0.899,0.856,0.877,0.958
+Media + Desviacion + PUI + Frecuencia_Dom,4,0.875,0.899,0.856,0.877,0.951
+Media + Desviacion + Velocidad_Media + Frecuencia_Dom,4,0.875,0.899,0.856,0.877,0.951
+Desviacion + RMS + PUAL + Velocidad_Media,4,0.875,0.899,0.856,0.877,0.951
+Media + PUI + PUAL + Dfi,4,0.875,0.899,0.856,0.877,0.949
+Media + PUAL + PUAL_Ratio + Frecuencia_Dom,4,0.875,0.899,0.856,0.877,0.948
+RMS + PUAL + PUAL_Ratio + Frecuencia_Dom,4,0.875,0.899,0.856,0.877,0.947
+Desviacion + RMS + PUAL + Dfi + Velocidad_Media,5,0.87,0.89,0.856,0.873,0.958
+Desviacion + RMS + PUI + Dfi + Velocidad_Media,5,0.87,0.89,0.856,0.873,0.957
+Media + RMS + Dfi + Velocidad_Media,4,0.87,0.89,0.856,0.873,0.954
+Media + Dfi,2,0.87,0.89,0.856,0.873,0.953
+Desviacion + RMS + PUI + PUAL,4,0.87,0.89,0.856,0.873,0.95
+RMS + PUI + PUAL + Dfi,4,0.87,0.89,0.856,0.873,0.948
+Media + RMS + PUAL + PUAL_Ratio + Frecuencia_Dom,5,0.87,0.89,0.856,0.873,0.946
+Media + Desviacion + RMS + PUAL + Frecuencia_Dom,5,0.87,0.89,0.856,0.873,0.945
+Desviacion + RMS + PUI + PUAL + Dfi,5,0.865,0.881,0.856,0.868,0.956
+Desviacion + PUAL + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.865,0.881,0.856,0.868,0.955
+Media + Desviacion + PUI + Velocidad_Media,4,0.865,0.881,0.856,0.868,0.952
+RMS + Dfi,2,0.865,0.881,0.856,0.868,0.95
+Desviacion + PUAL + Velocidad_Media,3,0.865,0.881,0.856,0.868,0.95
+Desviacion + PUI + PUAL + Velocidad_Media,4,0.865,0.881,0.856,0.868,0.947
+Desviacion + PUAL,2,0.865,0.881,0.856,0.868,0.937
+Desviacion + PUAL + Dfi + Velocidad_Media,4,0.86,0.873,0.856,0.864,0.953
+Desviacion + PUAL_Ratio + Dfi + Velocidad_Media,4,0.86,0.873,0.856,0.864,0.952
+Media + RMS + PUI + PUAL + Frecuencia_Dom,5,0.86,0.873,0.856,0.864,0.943
+PUAL_Ratio + Velocidad_Media,2,0.86,0.873,0.856,0.864,0.935
+Desviacion + PUAL + PUAL_Ratio + Velocidad_Media,4,0.855,0.864,0.856,0.86,0.951
+Desviacion + PUI + PUAL + Dfi,4,0.855,0.864,0.856,0.86,0.948
+Desviacion + PUI,2,0.855,0.864,0.856,0.86,0.94
+Desviacion + Velocidad_Media,2,0.855,0.864,0.856,0.86,0.94
+RMS + PUI + PUAL_Ratio + Velocidad_Media,4,0.855,0.864,0.856,0.86,0.938
+Media + PUI + PUAL_Ratio,3,0.85,0.856,0.856,0.856,0.939
+Media + RMS + PUI + PUAL_Ratio + Frecuencia_Dom,5,0.85,0.856,0.856,0.856,0.933
+Media + RMS + PUI + PUAL_Ratio,4,0.845,0.848,0.856,0.852,0.938
+Desviacion,1,0.845,0.848,0.856,0.852,0.935
+RMS + PUI + PUAL_Ratio,3,0.845,0.848,0.856,0.852,0.935
+Media + PUI + PUAL_Ratio + Frecuencia_Dom,4,0.845,0.848,0.856,0.852,0.932
+PUI + PUAL_Ratio + Frecuencia_Dom,3,0.845,0.848,0.856,0.852,0.927
+RMS + PUAL + Frecuencia_Dom,3,0.84,0.84,0.856,0.848,0.93
+RMS + PUI + Velocidad_Media + Frecuencia_Dom,4,0.84,0.84,0.856,0.848,0.904
+Media + PUI + Velocidad_Media + Frecuencia_Dom,4,0.835,0.832,0.856,0.844,0.906
+Media + Desviacion + RMS,3,0.885,0.926,0.846,0.884,0.951
+Media + Desviacion + RMS + PUAL_Ratio,4,0.88,0.917,0.846,0.88,0.958
+Desviacion + RMS + Dfi + Velocidad_Media,4,0.875,0.907,0.846,0.876,0.958
+Media + Desviacion + RMS + PUI,4,0.875,0.907,0.846,0.876,0.956
+Media + Desviacion + RMS + Velocidad_Media,4,0.875,0.907,0.846,0.876,0.956
+Media + Desviacion + PUAL + Velocidad_Media,4,0.875,0.907,0.846,0.876,0.955
+PUAL + Dfi + Velocidad_Media,3,0.875,0.907,0.846,0.876,0.954
+Media + Desviacion + RMS + PUI + Velocidad_Media,5,0.875,0.907,0.846,0.876,0.952
+Media + RMS + Dfi,3,0.875,0.907,0.846,0.876,0.951
+Desviacion + PUI + Dfi + Velocidad_Media + Frecuencia_Dom,5,0.87,0.898,0.846,0.871,0.957
+Media + Desviacion + PUI + Dfi,4,0.87,0.898,0.846,0.871,0.956
+Media + Desviacion + PUAL + Frecuencia_Dom,4,0.87,0.898,0.846,0.871,0.953
+PUAL + Dfi,2,0.87,0.898,0.846,0.871,0.948
+Media + Desviacion + Dfi + Velocidad_Media,4,0.865,0.889,0.846,0.867,0.959
+Desviacion + RMS + PUI + Velocidad_Media,4,0.865,0.889,0.846,0.867,0.95
+Desviacion + PUI + Velocidad_Media + Frecuencia_Dom,4,0.86,0.88,0.846,0.863,0.951
+Desviacion + PUI + PUAL_Ratio + Velocidad_Media,4,0.86,0.88,0.846,0.863,0.95
+Desviacion + PUI + PUAL + PUAL_Ratio,4,0.855,0.871,0.846,0.859,0.949
+RMS + PUI + Dfi + Frecuencia_Dom,4,0.855,0.871,0.846,0.859,0.944
+Media + PUI + PUAL_Ratio + Velocidad_Media,4,0.845,0.854,0.846,0.85,0.941
+Media + RMS + PUI + PUAL_Ratio + Velocidad_Media,5,0.845,0.854,0.846,0.85,0.936
+PUI + PUAL_Ratio + Velocidad_Media,3,0.845,0.854,0.846,0.85,0.933
+Media + PUAL_Ratio + Velocidad_Media,3,0.84,0.846,0.846,0.846,0.932
+Media + RMS + PUAL_Ratio + Velocidad_Media + Frecuencia_Dom,5,0.835,0.838,0.846,0.842,0.935
+Media + PUI + Velocidad_Media,3,0.835,0.838,0.846,0.842,0.911
+RMS + PUI + Velocidad_Media,3,0.83,0.83,0.846,0.838,0.912
+PUAL + Frecuencia_Dom,2,0.82,0.815,0.846,0.83,0.915
+Media + Desviacion,2,0.875,0.916,0.837,0.874,0.962
+Desviacion + RMS,2,0.875,0.916,0.837,0.874,0.956
+PUAL_Ratio + Dfi,2,0.87,0.906,0.837,0.87,0.941
+Desviacion + PUI + Dfi + Velocidad_Media,4,0.855,0.879,0.837,0.857,0.953
+Media + RMS + PUI + Frecuencia_Dom,4,0.84,0.853,0.837,0.845,0.915
+Media + RMS + Velocidad_Media + Frecuencia_Dom,4,0.84,0.853,0.837,0.845,0.915
+Media + PUI + Frecuencia_Dom,3,0.83,0.837,0.837,0.837,0.904
+Media + Velocidad_Media + Frecuencia_Dom,3,0.83,0.837,0.837,0.837,0.904
+RMS + PUI + Frecuencia_Dom,3,0.825,0.829,0.837,0.833,0.905
+RMS + Velocidad_Media + Frecuencia_Dom,3,0.825,0.829,0.837,0.833,0.905
+PUAL_Ratio + Dfi + Velocidad_Media + Frecuencia_Dom,4,0.855,0.887,0.827,0.856,0.951
+PUAL,1,0.835,0.851,0.827,0.839,0.921
+RMS + PUI,2,0.825,0.835,0.827,0.831,0.912
+RMS + Velocidad_Media,2,0.825,0.835,0.827,0.831,0.912
+Media + RMS + PUI,3,0.82,0.827,0.827,0.827,0.911
+Media + RMS + Velocidad_Media,3,0.82,0.827,0.827,0.827,0.911
+Media + RMS + PUI + Velocidad_Media,4,0.815,0.819,0.827,0.823,0.908
+Dfi + Frecuencia_Dom,2,0.82,0.833,0.817,0.825,0.923
+Media + PUI,2,0.82,0.84,0.808,0.824,0.914
+Media + Velocidad_Media,2,0.82,0.84,0.808,0.824,0.914
+PUI + Velocidad_Media + Frecuencia_Dom,3,0.8,0.808,0.808,0.808,0.897
+Dfi,1,0.805,0.822,0.798,0.81,0.916
+PUI,1,0.785,0.79,0.798,0.794,0.897
+Velocidad_Media,1,0.785,0.79,0.798,0.794,0.897
+PUI + Velocidad_Media,2,0.785,0.79,0.798,0.794,0.897
+PUI + Frecuencia_Dom,2,0.785,0.79,0.798,0.794,0.888
+Velocidad_Media + Frecuencia_Dom,2,0.785,0.79,0.798,0.794,0.888
+Media + RMS,2,0.72,0.755,0.683,0.717,0.8
+Media,1,0.62,0.632,0.644,0.638,0.66
+Media + RMS + Frecuencia_Dom,3,0.665,0.695,0.635,0.663,0.737
+RMS + Frecuencia_Dom,2,0.62,0.635,0.635,0.635,0.677
+RMS,1,0.59,0.602,0.625,0.613,0.644
+Media + Frecuencia_Dom,2,0.615,0.634,0.615,0.624,0.671
+Media + RMS + PUAL_Ratio + Frecuencia_Dom,4,0.67,0.721,0.596,0.653,0.717
+Media + PUAL_Ratio + Frecuencia_Dom,3,0.605,0.632,0.577,0.603,0.622
+RMS + PUAL_Ratio + Frecuencia_Dom,3,0.58,0.604,0.558,0.58,0.617
+PUAL_Ratio + Frecuencia_Dom,2,0.49,0.509,0.548,0.528,0.494
+Media + RMS + PUAL_Ratio,3,0.59,0.622,0.538,0.577,0.664
+Frecuencia_Dom,1,0.49,0.509,0.519,0.514,0.482
+Media + PUAL_Ratio,2,0.555,0.584,0.5,0.539,0.625
+PUAL_Ratio,1,0.505,0.525,0.5,0.512,0.53
+RMS + PUAL_Ratio,2,0.535,0.562,0.481,0.518,0.593

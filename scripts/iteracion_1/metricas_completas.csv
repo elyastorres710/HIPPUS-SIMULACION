@@ -9,16 +9,16 @@ Variables,Acc,Prec,Rec,F1,AUC
 "['PUI', 'PUAL', 'Frecuencia_Dom']",0.933,0.928,0.94,0.934,0.988
 "['Desviacion', 'PUAL', 'Dfi']",0.933,0.933,0.933,0.933,0.983
 "['Desviacion', 'PUAL', 'Frecuencia_Dom']",0.93,0.916,0.947,0.931,0.988
-"['Desviacion', 'RMS', 'PUAL']",0.93,0.933,0.927,0.93,0.983
 "['PUAL', 'Velocidad_Media', 'Frecuencia_Dom']",0.93,0.927,0.933,0.93,0.988
 "['PUI', 'PUAL', 'Velocidad_Media']",0.927,0.91,0.947,0.928,0.975
 "['Media', 'PUAL', 'Dfi']",0.927,0.927,0.927,0.927,0.984
+"['Desviacion', 'RMS', 'PUAL']",0.927,0.927,0.927,0.927,0.982
 "['RMS', 'PUAL', 'Dfi']",0.927,0.927,0.927,0.927,0.984
 "['PUAL', 'Dfi']",0.927,0.938,0.913,0.926,0.979
 "['Media', 'PUAL', 'Velocidad_Media']",0.923,0.921,0.927,0.924,0.978
 "['PUAL', 'Velocidad_Media']",0.92,0.909,0.933,0.921,0.979
-"['Media', 'PUI', 'PUAL']",0.917,0.914,0.92,0.917,0.98
 "['RMS', 'PUI', 'PUAL']",0.917,0.914,0.92,0.917,0.981
+"['Media', 'PUI', 'PUAL']",0.917,0.914,0.92,0.917,0.98
 "['RMS', 'PUAL', 'Velocidad_Media']",0.917,0.919,0.913,0.916,0.979
 "['Desviacion', 'PUAL']",0.91,0.924,0.893,0.908,0.98
 "['Media', 'PUAL', 'Frecuencia_Dom']",0.907,0.912,0.9,0.906,0.965
@@ -27,15 +27,15 @@ Variables,Acc,Prec,Rec,F1,AUC
 "['Desviacion', 'Dfi', 'Velocidad_Media']",0.887,0.908,0.86,0.884,0.928
 "['Media', 'RMS', 'PUAL']",0.887,0.908,0.86,0.884,0.962
 "['Desviacion', 'PUI', 'Velocidad_Media']",0.88,0.875,0.887,0.881,0.912
-"['Desviacion', 'Velocidad_Media', 'Frecuencia_Dom']",0.877,0.884,0.867,0.875,0.943
-"['Desviacion', 'PUI', 'Frecuencia_Dom']",0.877,0.884,0.867,0.875,0.943
 "['Desviacion', 'Velocidad_Media']",0.877,0.884,0.867,0.875,0.916
 "['Desviacion', 'PUI']",0.877,0.884,0.867,0.875,0.916
+"['Desviacion', 'Velocidad_Media', 'Frecuencia_Dom']",0.877,0.884,0.867,0.875,0.943
+"['Desviacion', 'PUI', 'Frecuencia_Dom']",0.877,0.884,0.867,0.875,0.943
 "['Desviacion', 'PUI', 'Dfi']",0.877,0.895,0.853,0.874,0.928
 "['Media', 'PUAL']",0.873,0.873,0.873,0.873,0.964
 "['RMS', 'PUAL']",0.87,0.872,0.867,0.87,0.963
-"['Desviacion', 'RMS', 'PUI']",0.873,0.906,0.833,0.868,0.913
 "['Desviacion', 'RMS', 'Velocidad_Media']",0.873,0.906,0.833,0.868,0.913
+"['Desviacion', 'RMS', 'PUI']",0.873,0.906,0.833,0.868,0.913
 "['Media', 'Desviacion', 'PUI']",0.87,0.905,0.827,0.864,0.911
 "['PUI', 'Dfi', 'Frecuencia_Dom']",0.867,0.882,0.847,0.864,0.93
 "['Media', 'Desviacion', 'Velocidad_Media']",0.87,0.905,0.827,0.864,0.911
@@ -46,19 +46,19 @@ Variables,Acc,Prec,Rec,F1,AUC
 "['PUI', 'Dfi']",0.85,0.878,0.813,0.844,0.891
 "['Dfi', 'Velocidad_Media']",0.843,0.865,0.813,0.838,0.892
 "['Desviacion', 'RMS', 'Frecuencia_Dom']",0.84,0.859,0.813,0.836,0.888
-"['RMS', 'Dfi', 'Velocidad_Media']",0.84,0.87,0.8,0.833,0.889
 "['Media', 'Dfi', 'Velocidad_Media']",0.84,0.87,0.8,0.833,0.888
-"['Media', 'PUI', 'Dfi']",0.837,0.874,0.787,0.828,0.898
+"['RMS', 'Dfi', 'Velocidad_Media']",0.84,0.87,0.8,0.833,0.889
 "['PUI', 'Dfi', 'Velocidad_Media']",0.83,0.837,0.82,0.828,0.881
+"['Media', 'PUI', 'Dfi']",0.837,0.874,0.787,0.828,0.898
 ['Frecuencia_Dom'],0.827,0.84,0.807,0.823,0.843
 "['RMS', 'PUI', 'Dfi']",0.827,0.86,0.78,0.818,0.895
 "['RMS', 'Dfi', 'Frecuencia_Dom']",0.827,0.866,0.773,0.817,0.897
 "['Media', 'Dfi', 'Frecuencia_Dom']",0.823,0.859,0.773,0.814,0.899
-"['RMS', 'PUI', 'Frecuencia_Dom']",0.81,0.816,0.8,0.808,0.84
 "['RMS', 'Velocidad_Media', 'Frecuencia_Dom']",0.81,0.816,0.8,0.808,0.84
+"['RMS', 'PUI', 'Frecuencia_Dom']",0.81,0.816,0.8,0.808,0.84
 "['Desviacion', 'Frecuencia_Dom']",0.803,0.797,0.813,0.805,0.892
-"['Media', 'Velocidad_Media', 'Frecuencia_Dom']",0.803,0.81,0.793,0.801,0.839
 "['Media', 'PUI', 'Frecuencia_Dom']",0.803,0.81,0.793,0.801,0.839
+"['Media', 'Velocidad_Media', 'Frecuencia_Dom']",0.803,0.81,0.793,0.801,0.839
 "['Dfi', 'Frecuencia_Dom']",0.803,0.81,0.793,0.801,0.898
 "['Media', 'Frecuencia_Dom']",0.76,0.75,0.78,0.765,0.811
 "['RMS', 'Frecuencia_Dom']",0.76,0.75,0.78,0.765,0.811
@@ -76,9 +76,9 @@ Variables,Acc,Prec,Rec,F1,AUC
 "['Desviacion', 'RMS']",0.737,0.748,0.713,0.73,0.8
 "['Desviacion', 'RMS', 'Dfi']",0.733,0.761,0.68,0.718,0.825
 ['Dfi'],0.71,0.737,0.653,0.693,0.787
-['Desviacion'],0.69,0.699,0.667,0.683,0.768
-"['Media', 'Velocidad_Media']",0.55,0.552,0.533,0.542,0.55
+['Desviacion'],0.687,0.697,0.66,0.678,0.768
 "['Media', 'PUI']",0.55,0.552,0.533,0.542,0.55
+"['Media', 'Velocidad_Media']",0.55,0.552,0.533,0.542,0.55
 "['RMS', 'PUI', 'Velocidad_Media']",0.53,0.529,0.547,0.538,0.533
 "['Media', 'PUI', 'Velocidad_Media']",0.533,0.533,0.54,0.536,0.541
 "['RMS', 'PUI']",0.54,0.542,0.52,0.531,0.54
@@ -88,6 +88,6 @@ Variables,Acc,Prec,Rec,F1,AUC
 ['Velocidad_Media'],0.497,0.497,0.513,0.505,0.477
 ['PUI'],0.497,0.497,0.513,0.505,0.477
 ['Media'],0.533,0.538,0.473,0.504,0.538
-"['Media', 'RMS', 'PUI']",0.513,0.514,0.48,0.497,0.549
 "['Media', 'RMS', 'Velocidad_Media']",0.513,0.514,0.48,0.497,0.549
+"['Media', 'RMS', 'PUI']",0.513,0.514,0.48,0.497,0.549
 "['Media', 'RMS']",0.51,0.511,0.473,0.491,0.544

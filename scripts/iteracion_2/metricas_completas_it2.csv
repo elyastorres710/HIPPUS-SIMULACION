@@ -1,0 +1,130 @@
+Variables,Exactitud,Precision,Sensibilidad,F1_Score,AUC
+"['PUAL_Ratio', 'Dfi', 'Velocidad_Media']",0.845,0.817,0.904,0.858,0.865
+"['PUAL', 'PUAL_Ratio', 'Velocidad_Media']",0.84,0.821,0.885,0.852,0.868
+"['PUI', 'PUAL_Ratio', 'Dfi']",0.835,0.82,0.875,0.847,0.855
+"['PUAL', 'PUAL_Ratio', 'Frecuencia_Dom']",0.83,0.824,0.856,0.84,0.878
+"['PUI', 'PUAL', 'PUAL_Ratio']",0.825,0.805,0.875,0.839,0.868
+"['Media', 'Desviacion', 'Dfi']",0.83,0.83,0.846,0.838,0.9
+"['Desviacion', 'Dfi', 'Frecuencia_Dom']",0.825,0.811,0.865,0.837,0.882
+"['PUAL_Ratio', 'Dfi', 'Frecuencia_Dom']",0.825,0.811,0.865,0.837,0.883
+"['Desviacion', 'PUAL', 'Dfi']",0.83,0.843,0.827,0.835,0.889
+"['RMS', 'Dfi', 'Frecuencia_Dom']",0.82,0.804,0.865,0.833,0.875
+"['Media', 'Dfi', 'Frecuencia_Dom']",0.82,0.804,0.865,0.833,0.882
+"['Media', 'PUAL_Ratio', 'Dfi']",0.82,0.804,0.865,0.833,0.877
+"['PUAL', 'PUAL_Ratio']",0.815,0.791,0.875,0.831,0.855
+"['Desviacion', 'PUAL_Ratio', 'Dfi']",0.82,0.815,0.846,0.83,0.897
+"['Desviacion', 'RMS', 'Dfi']",0.82,0.821,0.837,0.829,0.902
+"['Desviacion', 'PUI', 'Dfi']",0.82,0.821,0.837,0.829,0.892
+"['RMS', 'PUAL_Ratio', 'Dfi']",0.815,0.796,0.865,0.829,0.882
+"['RMS', 'PUI', 'Dfi']",0.815,0.802,0.856,0.828,0.884
+"['Desviacion', 'PUAL_Ratio', 'Frecuencia_Dom']",0.82,0.827,0.827,0.827,0.895
+"['Desviacion', 'PUAL_Ratio']",0.82,0.827,0.827,0.827,0.883
+"['Desviacion', 'Dfi', 'Velocidad_Media']",0.82,0.827,0.827,0.827,0.896
+"['Media', 'Desviacion', 'Frecuencia_Dom']",0.815,0.807,0.846,0.826,0.873
+"['Media', 'Dfi']",0.815,0.807,0.846,0.826,0.872
+"['Desviacion', 'PUI', 'PUAL_Ratio']",0.815,0.813,0.837,0.825,0.864
+"['Media', 'Desviacion', 'PUAL_Ratio']",0.815,0.813,0.837,0.825,0.897
+"['Desviacion', 'PUAL_Ratio', 'Velocidad_Media']",0.815,0.813,0.837,0.825,0.879
+"['PUAL', 'PUAL_Ratio', 'Dfi']",0.81,0.795,0.856,0.824,0.87
+"['PUI', 'PUAL', 'Dfi']",0.815,0.819,0.827,0.823,0.873
+"['Desviacion', 'RMS', 'Frecuencia_Dom']",0.81,0.8,0.846,0.822,0.871
+"['Desviacion', 'RMS', 'PUAL']",0.81,0.806,0.837,0.821,0.884
+"['RMS', 'Dfi', 'Velocidad_Media']",0.81,0.806,0.837,0.821,0.883
+"['Media', 'Desviacion']",0.81,0.806,0.837,0.821,0.876
+"['Media', 'Desviacion', 'RMS']",0.81,0.806,0.837,0.821,0.875
+"['Media', 'Dfi', 'Velocidad_Media']",0.81,0.806,0.837,0.821,0.883
+"['Desviacion', 'RMS', 'PUAL_Ratio']",0.81,0.811,0.827,0.819,0.895
+"['Media', 'PUAL', 'PUAL_Ratio']",0.805,0.793,0.846,0.819,0.874
+"['Desviacion', 'PUAL', 'Frecuencia_Dom']",0.81,0.811,0.827,0.819,0.883
+"['Desviacion', 'RMS', 'Velocidad_Media']",0.81,0.811,0.827,0.819,0.892
+"['Desviacion', 'RMS', 'PUI']",0.81,0.811,0.827,0.819,0.892
+"['Media', 'RMS', 'Dfi']",0.805,0.798,0.837,0.817,0.864
+"['PUAL', 'Dfi', 'Frecuencia_Dom']",0.805,0.798,0.837,0.817,0.867
+"['Desviacion', 'PUAL', 'Velocidad_Media']",0.81,0.824,0.808,0.816,0.886
+"['RMS', 'Dfi']",0.805,0.804,0.827,0.815,0.865
+"['Media', 'Desviacion', 'PUI']",0.805,0.804,0.827,0.815,0.892
+"['Desviacion', 'RMS']",0.805,0.804,0.827,0.815,0.876
+"['Media', 'Desviacion', 'Velocidad_Media']",0.805,0.804,0.827,0.815,0.892
+"['Desviacion', 'PUAL', 'PUAL_Ratio']",0.805,0.81,0.817,0.813,0.865
+"['Media', 'Desviacion', 'PUAL']",0.805,0.81,0.817,0.813,0.882
+"['RMS', 'PUAL', 'PUAL_Ratio']",0.8,0.791,0.837,0.813,0.875
+"['Media', 'PUI', 'Dfi']",0.8,0.796,0.827,0.811,0.883
+"['Desviacion', 'Velocidad_Media', 'Frecuencia_Dom']",0.8,0.802,0.817,0.81,0.875
+"['Media', 'PUAL', 'Dfi']",0.8,0.802,0.817,0.81,0.875
+"['Desviacion', 'PUI', 'Frecuencia_Dom']",0.8,0.802,0.817,0.81,0.875
+"['PUI', 'Dfi', 'Velocidad_Media']",0.8,0.808,0.808,0.808,0.855
+"['Desviacion', 'PUI', 'PUAL']",0.8,0.808,0.808,0.808,0.886
+"['Media', 'PUAL_Ratio', 'Velocidad_Media']",0.79,0.777,0.837,0.806,0.858
+"['Media', 'PUI', 'PUAL_Ratio']",0.79,0.777,0.837,0.806,0.853
+"['PUAL_Ratio', 'Dfi']",0.79,0.782,0.827,0.804,0.861
+"['PUI', 'Dfi', 'Frecuencia_Dom']",0.79,0.782,0.827,0.804,0.867
+"['PUAL', 'Dfi', 'Velocidad_Media']",0.795,0.8,0.808,0.804,0.866
+"['RMS', 'PUAL_Ratio', 'Velocidad_Media']",0.79,0.787,0.817,0.802,0.851
+"['Desviacion', 'PUAL']",0.795,0.806,0.798,0.802,0.88
+"['PUI', 'PUAL_Ratio', 'Frecuencia_Dom']",0.785,0.775,0.827,0.8,0.84
+"['Dfi', 'Velocidad_Media', 'Frecuencia_Dom']",0.785,0.775,0.827,0.8,0.866
+"['RMS', 'PUAL', 'Dfi']",0.79,0.798,0.798,0.798,0.872
+"['Dfi', 'Frecuencia_Dom']",0.785,0.785,0.808,0.796,0.866
+"['Desviacion', 'Dfi']",0.79,0.804,0.788,0.796,0.89
+"['RMS', 'PUI', 'PUAL_Ratio']",0.775,0.761,0.827,0.793,0.848
+"['Desviacion', 'PUI']",0.785,0.796,0.788,0.792,0.883
+"['Media', 'PUAL', 'Frecuencia_Dom']",0.78,0.778,0.808,0.792,0.853
+"['Desviacion', 'Velocidad_Media']",0.785,0.796,0.788,0.792,0.883
+"['Desviacion', 'PUI', 'Velocidad_Media']",0.785,0.802,0.779,0.79,0.872
+"['PUAL', 'Velocidad_Media', 'Frecuencia_Dom']",0.78,0.788,0.788,0.788,0.834
+"['Media', 'PUI', 'PUAL']",0.775,0.776,0.798,0.787,0.868
+"['Media', 'PUAL', 'Velocidad_Media']",0.775,0.776,0.798,0.787,0.861
+"['PUAL', 'Velocidad_Media']",0.775,0.781,0.788,0.785,0.836
+"['PUI', 'PUAL', 'Frecuencia_Dom']",0.775,0.781,0.788,0.785,0.832
+"['Desviacion', 'Frecuencia_Dom']",0.775,0.781,0.788,0.785,0.849
+"['PUI', 'PUAL']",0.775,0.781,0.788,0.785,0.84
+"['RMS', 'PUAL', 'Velocidad_Media']",0.77,0.774,0.788,0.781,0.865
+"['Dfi', 'Velocidad_Media']",0.77,0.774,0.788,0.781,0.858
+"['RMS', 'PUI', 'PUAL']",0.77,0.774,0.788,0.781,0.861
+"['PUAL_Ratio', 'Velocidad_Media', 'Frecuencia_Dom']",0.765,0.766,0.788,0.777,0.83
+"['RMS', 'PUAL', 'Frecuencia_Dom']",0.765,0.766,0.788,0.777,0.849
+"['PUI', 'PUAL_Ratio', 'Velocidad_Media']",0.755,0.739,0.817,0.776,0.8
+"['PUI', 'Dfi']",0.76,0.775,0.76,0.767,0.86
+"['PUAL', 'Dfi']",0.76,0.775,0.76,0.767,0.84
+"['Media', 'RMS', 'PUAL']",0.75,0.755,0.769,0.762,0.842
+['Desviacion'],0.76,0.786,0.74,0.762,0.861
+"['Media', 'RMS', 'Velocidad_Media']",0.745,0.743,0.779,0.761,0.821
+"['Media', 'RMS', 'PUI']",0.745,0.743,0.779,0.761,0.821
+"['PUI', 'PUAL', 'Velocidad_Media']",0.75,0.765,0.75,0.757,0.837
+"['RMS', 'PUAL']",0.74,0.75,0.75,0.75,0.839
+['Dfi'],0.745,0.768,0.731,0.749,0.843
+"['Media', 'PUI', 'Frecuencia_Dom']",0.73,0.727,0.769,0.748,0.815
+"['Media', 'Velocidad_Media', 'Frecuencia_Dom']",0.73,0.727,0.769,0.748,0.815
+"['PUAL_Ratio', 'Velocidad_Media']",0.72,0.711,0.779,0.743,0.786
+"['PUI', 'PUAL_Ratio']",0.72,0.711,0.779,0.743,0.791
+"['Media', 'PUAL']",0.73,0.745,0.731,0.738,0.841
+"['RMS', 'PUI', 'Frecuencia_Dom']",0.72,0.718,0.76,0.738,0.813
+"['RMS', 'Velocidad_Media', 'Frecuencia_Dom']",0.72,0.718,0.76,0.738,0.813
+"['Media', 'Velocidad_Media']",0.72,0.731,0.731,0.731,0.815
+"['Media', 'PUI']",0.72,0.731,0.731,0.731,0.815
+"['PUI', 'Velocidad_Media', 'Frecuencia_Dom']",0.71,0.717,0.731,0.724,0.772
+"['RMS', 'PUI']",0.71,0.721,0.721,0.721,0.814
+"['RMS', 'Velocidad_Media']",0.71,0.721,0.721,0.721,0.814
+"['RMS', 'PUI', 'Velocidad_Media']",0.705,0.723,0.702,0.712,0.81
+['PUAL'],0.695,0.701,0.721,0.711,0.792
+"['Media', 'PUI', 'Velocidad_Media']",0.7,0.716,0.702,0.709,0.81
+"['PUAL', 'Frecuencia_Dom']",0.695,0.713,0.692,0.702,0.802
+"['Media', 'RMS']",0.665,0.67,0.702,0.685,0.685
+['Velocidad_Media'],0.685,0.72,0.644,0.68,0.765
+['PUI'],0.685,0.72,0.644,0.68,0.765
+"['PUI', 'Velocidad_Media']",0.685,0.72,0.644,0.68,0.765
+"['PUI', 'Frecuencia_Dom']",0.665,0.695,0.635,0.663,0.756
+"['Velocidad_Media', 'Frecuencia_Dom']",0.665,0.695,0.635,0.663,0.756
+"['Media', 'RMS', 'PUAL_Ratio']",0.655,0.673,0.654,0.663,0.664
+"['Media', 'RMS', 'Frecuencia_Dom']",0.595,0.604,0.644,0.623,0.656
+['Media'],0.595,0.606,0.635,0.62,0.62
+"['RMS', 'Frecuencia_Dom']",0.565,0.574,0.635,0.603,0.621
+"['Media', 'PUAL_Ratio', 'Frecuencia_Dom']",0.575,0.587,0.615,0.601,0.611
+"['RMS', 'PUAL_Ratio', 'Frecuencia_Dom']",0.575,0.589,0.606,0.597,0.602
+"['Media', 'PUAL_Ratio']",0.6,0.63,0.558,0.592,0.613
+"['Media', 'Frecuencia_Dom']",0.555,0.566,0.615,0.59,0.613
+"['RMS', 'PUAL_Ratio']",0.58,0.602,0.567,0.584,0.593
+['Frecuencia_Dom'],0.535,0.551,0.567,0.559,0.532
+"['PUAL_Ratio', 'Frecuencia_Dom']",0.52,0.542,0.5,0.52,0.535
+['PUAL_Ratio'],0.505,0.527,0.462,0.492,0.506
+['RMS'],0.45,0.473,0.5,0.486,0.467

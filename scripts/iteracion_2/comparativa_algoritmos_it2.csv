@@ -1,0 +1,4 @@
+Algoritmo,Exactitud,Precision,Sensibilidad,F1_Score
+Random Forest,0.82,0.786,0.88,0.83
+Support Vector Machine,0.837,0.795,0.907,0.847
+K-Means,0.793,0.765,0.847,0.804

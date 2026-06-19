@@ -1,0 +1,16 @@
+=== REPORTE XAI — SHAP sobre Random Forest (Iteración 2) ===
+Biomarcadores evaluados : ['Media', 'PUAL', 'PUAL_Ratio', 'Dfi']
+Valor esperado base     : 0.4979  (predicción media del modelo en log-odds para Migraña Vestibular)
+
+Importancia media |SHAP| por biomarcador (ordenada de mayor a menor):
+  Biomarcador            |SHAP| medio  Contribución relativa
+  ----------------------------------------------------------
+  Dfi                          0.2156                  49.1%
+  PUAL                         0.1341                  30.5%
+  PUAL_Ratio                   0.0605                  13.8%
+  Media                        0.0290                   6.6%
+
+Interpretación:
+  SHAP > 0 → el biomarcador empuja la predicción hacia Migraña Vestibular
+  SHAP < 0 → el biomarcador empuja la predicción hacia Control
+  |SHAP| medio → importancia global independiente de la dirección
