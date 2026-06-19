@@ -32,7 +32,7 @@ from typing import Tuple
 # ---------------------------------------------------------------------------
 # Constantes de configuración
 # ---------------------------------------------------------------------------
-PATH_DATOS: str = 'data/processed/analisis_resultados_it2.csv'
+PATH_DATOS: str = 'data/processed/analisis_final.csv'
 PATH_SALIDA: str = 'data/test/'
 
 BIOMARCADOR: str = 'PUI'
